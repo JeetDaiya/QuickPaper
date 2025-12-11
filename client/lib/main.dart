@@ -1,3 +1,4 @@
+import 'package:client/features/home/views/pages/home_page.dart';
 import 'package:client/features/questions/view/question_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -35,7 +36,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: QuestionScreen(),
+      home: HomePage(),
     );
   }
 }

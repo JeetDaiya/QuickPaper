@@ -42,4 +42,29 @@ class QuestionRepository {
     }
   }
 
+  Future<int>getTotalQuestions() async {
+    try {
+      final localVersion = _local.getDataVersion();
+      final remoteVersion = await _remote.getVersion();
+      if (localVersion < remoteVersion) {
+        Future.delayed(const Duration(seconds: 5));
+        final freshData = await _remote.getQuestions();
+        await _local.cacheQuestion(freshData);
+        await _local.setDataVersion(remoteVersion);
+        return freshData.length;
+      } else {
+        return _local
+            .getQuestion()
+            .length;
+      }
+    }catch(error){
+      try{
+        final cached = _local.getQuestion();
+        return cached.length;
+    }
+      catch(_){
+        throw Exception('Error loading question, check you internet and try again.');
+      }
+    }
+  }
 }

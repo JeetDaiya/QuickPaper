@@ -1,4 +1,5 @@
 import 'package:client/core/theme/app_pallete.dart';
+import 'package:client/features/home/widget/stat_widget.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -54,8 +55,8 @@ class HomePage extends StatelessWidget {
           ),
           Positioned(
             top: 130,
-            left: 25,
-            right: 25,
+            left: 20,
+            right: 20,
             child: Container(
               height: 125,
               width: double.infinity,
@@ -72,86 +73,9 @@ class HomePage extends StatelessWidget {
                   ), //BoxShadow
                 ],
               ),
-              child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Row(
-                      children: [
-                        Container(
-                          decoration: BoxDecoration(
-                              color: Color.fromARGB(255, 240, 253, 250),
-                              borderRadius: BorderRadius.circular(5.0)
-
-                          ),
-                          height: 40,
-                          width: 40,
-                          child: Icon(Icons.insert_drive_file_rounded, color: Color.fromARGB(255, 26, 150, 136), size: 30),
-                        ),
-                        SizedBox(width: 10),
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              '45',
-                              style: TextStyle(
-                                fontSize: 20,
-                              ),
-                            ),
-                            Text(
-                              'Papers Created',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                color: Colors.black54,
-                              ),
-                            )
-                          ],
-                        )
-
-                      ],
-                    ),
-                    const SizedBox(width: 10),
-                    Row(
-                      children: [
-                        Container(
-                          decoration: BoxDecoration(
-                              color: Color.fromARGB(255, 239, 246, 255),
-                              borderRadius: BorderRadius.circular(5.0)
-
-                          ),
-                          height: 40,
-                          width: 40,
-                          child: Icon(Icons.question_answer, color: Color.fromARGB(255, 23, 95, 252), size: 30,),
-                        ),
-                        SizedBox(width: 10),
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              '1001',
-                              style: TextStyle(
-                                fontSize: 20,
-                              ),
-                            ),
-                            Text(
-                              'Questions in\nbank',
-                              textAlign: TextAlign.left,
-                              style: TextStyle(
-                                color: Colors.black54,
-                              ),
-                            )
-                          ],
-                        )
-
-                      ],
-                    )
-                  ]
-              ),
+              child: StatWidget(),
             ),
           ),
-
-
         ],
       ),
     );
