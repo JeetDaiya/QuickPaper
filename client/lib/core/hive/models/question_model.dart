@@ -16,7 +16,7 @@ class Question{
   Map<String, dynamic>? additionalData;
 
   @HiveField(4)
-  late String subject;
+  String? subject;
 
   @HiveField(5)
   late bool hasImage;
@@ -24,17 +24,38 @@ class Question{
   @HiveField(6)
   String? chapter;
 
-  @HiveField(6)
-  late String imageUrl;
+  @HiveField(7)
+  String? imageUrl;
+
+  @HiveField(8)
+  String? standard;
+
+  @HiveField(9)
+  late int marks;
+
 
   Question({
     required this.id,
     required this.text,
     required this.questionType,
     this.additionalData,
-    required this.subject,
     this.hasImage = false,
     required this.imageUrl,
     this.chapter,
+    this.standard,
+    required this.marks
   });
+
+
+  factory Question.fromMap(Map<String, dynamic> map) {
+    return Question(
+      id: map['id'].toString(),
+      text: map['text'] as String,
+      questionType: map['type'] as String,
+      additionalData: map['data'] != null ? Map<String, dynamic>.from(map['data']) : null,
+      hasImage: map['has_image'] as bool,
+      imageUrl: map['imageUrl'] != null ? map['imageUrl'] as String : null,
+      marks: map['marks'] as int,
+    );
+  }
 }

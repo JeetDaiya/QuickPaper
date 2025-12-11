@@ -1,0 +1,611 @@
+{
+  "version" : 1,
+"data" : [
+  {
+    "id": 1,
+    "type": "MCQ",
+    "marks": 1,
+    "text": "The decimal expansion of is non-terminating and recurring.",
+    "data": {
+      "options": [
+        "(A) \\frac{6}{15}",
+        "(B) \\frac{2}{15}",
+        "(C) \\frac{3}{8}",
+        "(D) \\frac{4}{8}"
+      ]
+    },
+    "has_image": false
+  },
+  {
+    "id": 2,
+    "type": "MCQ",
+    "marks": 1,
+    "text": "Mean of first ten natural numbers = __________.",
+    "data": {
+      "options": [
+        "(A) 5.5",
+        "(C) 5.05",
+        "(B) 6.5",
+        "(D) 5"
+      ]
+    },
+    "has_image": false
+  },
+  {
+    "id": 3,
+    "type": "MCQ",
+    "marks": 1,
+    "text": "The graph of y = P(x) is given below. The number of zeroes of P(x) is __________.",
+    "data": {
+      "options": [
+        "(A) 1",
+        "(C) 3",
+        "(B) 2",
+        "(D) 0"
+      ]
+    },
+    "has_image": true
+  },
+  {
+    "id": 4,
+    "type": "MCQ",
+    "marks": 1,
+    "text": "The lines representing the pair of equations __________, are parallel.",
+    "data": {
+      "options": [
+        "(A) x + 2y− 4 = 0, 2x + 4y −12 = 0",
+        "(B) 2x + 3y -9 = 0, 4x + 6y – 18 = 0",
+        "(C) x – 2y = 0, 3x + 4y – 20 = 0",
+        "(D) 9x + 3y + 12 = 0, 18x + 6y + 24 = 0"
+      ]
+    },
+    "has_image": false
+  },
+  {
+    "id": 5,
+    "type": "MCQ",
+    "marks": 1,
+    "text": "The discriminant (b^2 - 4ac) of the quadratic equation 3x^2-6x+2=0 is __________.",
+    "data": {
+      "options": [
+        "(A) -12",
+        "(C) -60",
+        "(B) 12",
+        "(D) 60"
+      ]
+    },
+    "has_image": false
+  },
+  {
+    "id": 6,
+    "type": "MCQ",
+    "marks": 1,
+    "text": "For an A.P., if a = 7, d = 3 and n = 8 then a_n = __________.",
+    "data": {
+      "options": [
+        "(A) 25",
+        "(C) 27",
+        "(B) 26",
+        "(D) 28"
+      ]
+    },
+    "has_image": false
+  },
+  {
+    "id": 7,
+    "type": "MCQ",
+    "marks": 1,
+    "text": "The distance of M(x, y) from the origin O(0, 0) is __________.",
+    "data": {
+      "options": [
+        "(A) x^2 + y^2",
+        "(C) \\sqrt{x^2-y^2}",
+        "(B) \\sqrt{x^2 + y^2}",
+        "(D) |x-y|"
+      ]
+    },
+    "has_image": false
+  },
+  {
+    "id": 8,
+    "type": "MCQ",
+    "marks": 1,
+    "text": "\\sqrt{1+ \\tan^2 \\theta} = __________.",
+    "data": {
+      "options": [
+        "(A) 1 + \\tan \\theta",
+        "(C) \\sec \\theta",
+        "(B) \\sec^2 \\theta",
+        "(D) \\cosec \\theta"
+      ]
+    },
+    "has_image": false
+  },
+  {
+    "id": 9,
+    "type": "MCQ",
+    "marks": 1,
+    "text": "The angle subtended by a minute hand of a clock at the centre of the clock in 10 minutes is __________.",
+    "data": {
+      "options": [
+        "(A) 30°",
+        "(C) 60°",
+        "(B) 45°",
+        "(D) 90°"
+      ]
+    },
+    "has_image": false
+  },
+  {
+    "id": 10,
+    "type": "MCQ",
+    "marks": 1,
+    "text": "The formula to find the volume of a sphere is __________.",
+    "data": {
+      "options": [
+        "(A) \\frac{4}{3} \\pi r^3",
+        "(C) \\frac{2}{3} \\pi r^2",
+        "(B) \\frac{2}{3} \\pi r^3",
+        "(D) 4\\pi r^2"
+      ]
+    },
+    "has_image": false
+  },
+  {
+    "id": 11,
+    "type": "MCQ",
+    "marks": 1,
+    "text": "If the zeroes of the quadratic polynomial P(x) = ax^2 + bx + c (a \\neq 0) \\alpha and \\beta, then \\alpha\\beta = __________.",
+    "data": {
+      "options": [
+        "(A) \\frac{C}{a}",
+        "(C) -\\frac{b}{a}",
+        "(B) \\frac{c}{a}",
+        "(D) \\frac{b}{a}"
+      ]
+    },
+    "has_image": false
+  },
+  {
+    "id": 12,
+    "type": "MCQ",
+    "marks": 1,
+    "text": "The probability of an event cannot be __________.",
+    "data": {
+      "options": [
+        "(A) \\frac{2}{3}",
+        "(C) 15%",
+        "(B) -1.5",
+        "(D) 0.7"
+      ]
+    },
+    "has_image": false
+  },
+  {
+    "id": 13,
+    "type": "TRUE_FALSE",
+    "marks": 1,
+    "text": "\\sqrt{3x} + 5 is a linear polynomial.",
+    "data": {},
+    "has_image": false
+  },
+  {
+    "id": 14,
+    "type": "TRUE_FALSE",
+    "marks": 1,
+    "text": "The common difference of A.P. 10, 8, 6, 4, ----- is 2.",
+    "data": {},
+    "has_image": false
+  },
+  {
+    "id": 15,
+    "type": "TRUE_FALSE",
+    "marks": 1,
+    "text": "\\sin A = \\cos A for all values of A.",
+    "data": {},
+    "has_image": false
+  },
+  {
+    "id": 16,
+    "type": "TRUE_FALSE",
+    "marks": 1,
+    "text": "There is only one tangent at a point of the circle.",
+    "data": {},
+    "has_image": false
+  },
+  {
+    "id": 17,
+    "type": "TRUE_FALSE",
+    "marks": 1,
+    "text": "3 (Mean) = Mode + 2 (Median).",
+    "data": {},
+    "has_image": false
+  },
+  {
+    "id": 18,
+    "type": "TRUE_FALSE",
+    "marks": 1,
+    "text": "The sum of the probabilities of all the elementary events of an experiment is 1.",
+    "data": {},
+    "has_image": false
+  },
+  {
+    "id": 19,
+    "type": "FILL_BLANK",
+    "marks": 1,
+    "text": "HCF (12, 21) = __________ (1, 3, 7)",
+    "data": {},
+    "has_image": false
+  },
+  {
+    "id": 20,
+    "type": "FILL_BLANK",
+    "marks": 1,
+    "text": "The graph of P(x) = x^2 + 3x + 2 is a __________ (ray, line, parabola)",
+    "data": {},
+    "has_image": false
+  },
+  {
+    "id": 21,
+    "type": "FILL_BLANK",
+    "marks": 1,
+    "text": "A circle can have __________ parallel tangents at the most. (two, three, infinitely many)",
+    "data": {},
+    "has_image": false
+  },
+  {
+    "id": 22,
+    "type": "FILL_BLANK",
+    "marks": 1,
+    "text": "If the perimeter and the area of a circle are numerically equal, then the radius of the circle is __________ (\\pi, 4, 2)",
+    "data": {},
+    "has_image": false
+  },
+  {
+    "id": 23,
+    "type": "FILL_BLANK",
+    "marks": 1,
+    "text": "The class mark of the class 30-40 is __________ (30, 35, 40)",
+    "data": {},
+    "has_image": false
+  },
+  {
+    "id": 24,
+    "type": "FILL_BLANK",
+    "marks": 1,
+    "text": "The probability of Sun setting in the west is __________ (-1, 0, 1)",
+    "data": {},
+    "has_image": false
+  },
+  {
+    "id": 25,
+    "type": "SHORT_ANS",
+    "marks": 2,
+    "text": "Find a quadratic polynomial, the sum and the product of whose zeroes are 0 and -3.",
+    "data": {},
+    "has_image": false
+  },
+  {
+    "id": 26,
+    "type": "SHORT_ANS",
+    "marks": 2,
+    "text": "Divide x^2 + 7x + 10 by x + 5 and write the quotient and the remainder.",
+    "data": {},
+    "has_image": false
+  },
+  {
+    "id": 27,
+    "type": "SHORT_ANS",
+    "marks": 2,
+    "text": "Find the roots of the quadratic equation \\sqrt{2}x^2 + 7x + 5\\sqrt{2} = 0 by factorization.",
+    "data": {},
+    "has_image": false
+  },
+  {
+    "id": 28,
+    "type": "SHORT_ANS",
+    "marks": 2,
+    "text": "In a flower bed, there are 25 rose plants in the first row, 23 in the second, 21 in the third and so on. There are 5 rose plants in the last row. How many rows are there in the flower bed?",
+    "data": {},
+    "has_image": false
+  },
+  {
+    "id": 29,
+    "type": "SHORT_ANS",
+    "marks": 2,
+    "text": "Find the sum of first 10 terms of the A.P. -10, -5, 0, 5, -----.",
+    "data": {},
+    "has_image": false
+  },
+  {
+    "id": 30,
+    "type": "SHORT_ANS",
+    "marks": 2,
+    "text": "Find a point on the y-axis which is equidistant from the points P(6, 5) and Q(-4, 3).",
+    "data": {},
+    "has_image": false
+  },
+  {
+    "id": 31,
+    "type": "SHORT_ANS",
+    "marks": 2,
+    "text": "Evaluate: 2 \\tan^2 45^\\circ – \\cos^2 30^\\circ + \\sin^2 60^\\circ.",
+    "data": {},
+    "has_image": false
+  },
+  {
+    "id": 32,
+    "type": "SHORT_ANS",
+    "marks": 2,
+    "text": "If \\sin \\theta = \\frac{3}{4}, calculate \\cos \\theta and \\tan \\theta.",
+    "data": {},
+    "has_image": false
+  },
+  {
+    "id": 33,
+    "type": "SHORT_ANS",
+    "marks": 2,
+    "text": "The angle of elevation of the top of a tower from a point on the ground, which is 60 m away from the foot of the tower is 30°. Find the height of the tower.",
+    "data": {},
+    "has_image": false
+  },
+  {
+    "id": 34,
+    "type": "SHORT_ANS",
+    "marks": 2,
+    "text": "A tangent PA at a point P of a circle of radius 5 cm meets a line through the centre 'O' at a point A, so that OA = 12 cm. Find PA.",
+    "data": {},
+    "has_image": false
+  },
+  {
+    "id": 35,
+    "type": "SHORT_ANS",
+    "marks": 2,
+    "text": "Two cubes each of side 5 cm are joined end to end. Find the surface area of the resulting cuboid.",
+    "data": {},
+    "has_image": false
+  },
+  {
+    "id": 36,
+    "type": "SHORT_ANS",
+    "marks": 2,
+    "text": "A cone of height 24 cm and radius of base 6 cm is made up of modelling clay. Rahul reshapes it in the form of a sphere. Find the radius of the sphere.",
+    "data": {},
+    "has_image": false
+  },
+  {
+    "id": 37,
+    "type": "TABLE_DATA",
+    "marks": 2,
+    "text": "Find the mode of the following data.",
+    "data": {
+      "headers": [
+        "Class Interval",
+        "10-25",
+        "25-40",
+        "40-55",
+        "55-70",
+        "70-85",
+        "85-100"
+      ],
+      "rows": [
+        [
+          "Frequency",
+          "2",
+          "3",
+          "7",
+          "6",
+          "6",
+          "6"
+        ]
+      ]
+    },
+    "has_image": false
+  },
+  {
+    "id": 38,
+    "type": "SHORT_ANS",
+    "marks": 2,
+    "text": "Two players Sania and Sangeeta play a tennis match. It is known that, the probability of Sania winning the match is 0.57. What is the probability of Sangeeta winning the match?",
+    "data": {},
+    "has_image": false
+  },
+  {
+    "id": 39,
+    "type": "SHORT_ANS",
+    "marks": 3,
+    "text": "Solve the pair of equations: 2x + 3y = 7, 3x – 4y = 2 by elimination method.",
+    "data": {},
+    "has_image": false
+  },
+  {
+    "id": 40,
+    "type": "SHORT_ANS",
+    "marks": 3,
+    "text": "The sum and the difference of two numbers are 18 and 2 respectively. Find the numbers.",
+    "data": {},
+    "has_image": false
+  },
+  {
+    "id": 41,
+    "type": "SHORT_ANS",
+    "marks": 3,
+    "text": "The sum of the reciprocals of Jayesh's ages (in years) 3 years ago and 5 years from now is \\frac{1}{3}. Find his present age.",
+    "data": {},
+    "has_image": false
+  },
+  {
+    "id": 42,
+    "type": "SHORT_ANS",
+    "marks": 3,
+    "text": "Find the sum of first 51 terms of an A.P. whose second and third terms are 14 and 18 respectively.",
+    "data": {},
+    "has_image": false
+  },
+  {
+    "id": 43,
+    "type": "SHORT_ANS",
+    "marks": 3,
+    "text": "How many three digit numbers are divisible by 7?",
+    "data": {},
+    "has_image": false
+  },
+  {
+    "id": 44,
+    "type": "SHORT_ANS",
+    "marks": 3,
+    "text": "Find the area of the triangle whose vertices are P(1, -1), Q(–4, 6) and R(–3, −5).",
+    "data": {},
+    "has_image": false
+  },
+  {
+    "id": 45,
+    "type": "SHORT_ANS",
+    "marks": 3,
+    "text": "If A(1,2), B(4, y), C(x, 6) and D(3, 5) are the vertices of a parallelogram taken in order, find x and y.",
+    "data": {},
+    "has_image": false
+  },
+  {
+    "id": 46,
+    "type": "SHORT_ANS",
+    "marks": 3,
+    "text": "A toy is in the form of a cone of radius 3.5 cm mounted on a hemisphere of same radius. The total height of the toy is 15.5 cm. Find the total surface area of the toy.",
+    "data": {},
+    "has_image": false
+  },
+  {
+    "id": 47,
+    "type": "TABLE_DATA",
+    "marks": 3,
+    "text": "Find the mean of the following data.",
+    "data": {
+      "headers": [
+        "Class Interval",
+        "100-150",
+        "150-200",
+        "200-250",
+        "250-300",
+        "300-350"
+      ],
+      "rows": [
+        [
+          "Frequency",
+          "4",
+          "5",
+          "12",
+          "2",
+          "2"
+        ]
+      ]
+    },
+    "has_image": false
+  },
+  {
+    "id": 48,
+    "type": "TABLE_DATA",
+    "marks": 3,
+    "text": "Find the median of the following data.",
+    "data": {
+      "headers": [
+        "Class Interval",
+        "0-10",
+        "10-20",
+        "20-30",
+        "30-40",
+        "40-50",
+        "50-60"
+      ],
+      "rows": [
+        [
+          "Frequency",
+          "5",
+          "8",
+          "20",
+          "15",
+          "7",
+          "5"
+        ]
+      ]
+    },
+    "has_image": false
+  },
+  {
+    "id": 49,
+    "type": "SHORT_ANS",
+    "marks": 3,
+    "text": "One card is drawn from a well-shuffled deck of 52 cards. Find the probability of getting\ni) a king of red colour\nii) a face card\niii) a spade",
+    "data": {},
+    "has_image": false
+  },
+  {
+    "id": 50,
+    "type": "SHORT_ANS",
+    "marks": 3,
+    "text": "A box contains 90 discs which are numbered from 1 to 90. If one disc is drawn at random from the box, find the probability that it bears\ni) a two digit number\nii) a perfect square number\niii) a number divisible by 5.",
+    "data": {},
+    "has_image": false
+  },
+  {
+    "id": 51,
+    "type": "LONG_ANS",
+    "marks": 4,
+    "text": "In triangle ABC, \\angle B = 90°. Prove that AC^2 = AB^2 + BC^2.",
+    "data": {},
+    "has_image": false
+  },
+  {
+    "id": 52,
+    "type": "LONG_ANS",
+    "marks": 4,
+    "text": "If the square of one side of a triangle is equal to the sum of the squares of the other two sides, then prove that the angle opposite to the first side is a right angle.",
+    "data": {},
+    "has_image": false
+  },
+  {
+    "id": 53,
+    "type": "LONG_ANS",
+    "marks": 4,
+    "text": "Draw a line segment of length 7 cm and divide it in the ratio 3:5. Write the steps of construction.",
+    "data": {},
+    "has_image": false
+  },
+  {
+    "id": 54,
+    "type": "LONG_ANS",
+    "marks": 4,
+    "text": "Draw two tangents to a circle of radius 5 cm, which are inclined at an angle of 60° to each other.",
+    "data": {},
+    "has_image": false
+  },
+  {
+    "id": 55,
+    "type": "TABLE_DATA",
+    "marks": 4,
+    "text": "The median of the following data is 8.05. Find the values of a and b, if the total frequency is 100.",
+    "data": {
+      "headers": [
+        "Class Interval",
+        "1-4",
+        "4-7",
+        "7-10",
+        "10-13",
+        "13-16",
+        "16-19"
+      ],
+      "rows": [
+        [
+          "Frequency",
+          "6",
+          "a",
+          "40",
+          "16",
+          "b",
+          "4"
+        ]
+      ]
+    },
+    "has_image": false
+  }
+]
+}
