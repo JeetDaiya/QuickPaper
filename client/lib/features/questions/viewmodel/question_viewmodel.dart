@@ -18,6 +18,13 @@ class QuestionViewmodel extends _$QuestionViewmodel {
   }
   Future<void>refresh() async{
     state = const AsyncValue.loading();
+    try{
+      final data = await ref.watch(questionRepositoryProvider).getQuestions();
+      state = AsyncValue.data(data);
+    }
+    catch(error){
+        state = AsyncValue.error(error, StackTrace.current);
+    }
     state = AsyncValue.data(await _fetchData());
   }
 }

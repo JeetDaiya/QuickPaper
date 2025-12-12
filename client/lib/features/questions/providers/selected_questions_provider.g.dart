@@ -1,26 +1,26 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'question_viewmodel.dart';
+part of 'selected_questions_provider.dart';
 
 // **************************************************************************
 // RiverpodGenerator
 // **************************************************************************
 
-String _$questionViewmodelHash() => r'f3109b5ce76cdc316baa38b48a7056805f7cb9f3';
+String _$selectedQuestionsHash() => r'294e4c90ea311e1c61a4f80bff203f885a971d60';
 
-/// See also [QuestionViewmodel].
-@ProviderFor(QuestionViewmodel)
-final questionViewmodelProvider = AutoDisposeAsyncNotifierProvider<
-    QuestionViewmodel, List<Question>>.internal(
-  QuestionViewmodel.new,
-  name: r'questionViewmodelProvider',
+/// See also [SelectedQuestions].
+@ProviderFor(SelectedQuestions)
+final selectedQuestionsProvider =
+    AutoDisposeNotifierProvider<SelectedQuestions, List<Question>>.internal(
+  SelectedQuestions.new,
+  name: r'selectedQuestionsProvider',
   debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
       ? null
-      : _$questionViewmodelHash,
+      : _$selectedQuestionsHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );
 
-typedef _$QuestionViewmodel = AutoDisposeAsyncNotifier<List<Question>>;
+typedef _$SelectedQuestions = AutoDisposeNotifier<List<Question>>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
