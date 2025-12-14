@@ -1,16 +1,23 @@
+import 'package:client/core/theme/app_pallete.dart';
 import 'package:client/features/questions/providers/filtered_questions_provider.dart';
 import 'package:client/features/questions/providers/marks_filter_provider.dart';
+import 'package:client/features/questions/providers/selected_question_info_provider.dart';
+import 'package:client/features/questions/providers/selected_questions_provider.dart';
+import 'package:client/features/questions/view/pdf_preview_screen.dart';
+import 'package:client/features/questions/view/selected_questions_preview_screen.dart';
 import 'package:client/features/questions/viewmodel/question_viewmodel.dart';
-import 'package:client/features/questions/widgets/question_tag.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../../../core/hive/models/question_model.dart';
+import 'package:pdf/pdf.dart';
+import '../services/question_pdf_service.dart';
 import '../widgets/filter_bar.dart';
-import 'package:gpt_markdown/gpt_markdown.dart';
+import '../widgets/question_card.dart';
+
 
 // 1. Extend ConsumerWidget (not StatelessWidget)
 class QuestionScreen extends ConsumerWidget {
   const QuestionScreen({super.key});
+
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -18,15 +25,38 @@ class QuestionScreen extends ConsumerWidget {
     // This variable 'questionState' is an AsyncValue (it holds data, error, or loading)
     final questionState = ref.watch(filteredQuestionsProvider);
     final marksFilter = ref.watch(marksFilterProvider.select((value) => value));
-
+    final selectedQuestionInfo = ref.watch(selectedQuestionsInfoProvider);
     return Scaffold(
-      appBar: AppBar(title: const Text("Questions")),
+      appBar: AppBar(
+          title: const Text("Questions"),
+        actions: selectedQuestionInfo.count > 0 ? [
+          TextButton(
+            onPressed: () {
+              ref.read(selectedQuestionsProvider.notifier).clear();
+            },
+            child: const Text(
+              'Clear',
+              style: TextStyle(color: Colors.red),
+            ),
+          ),
+        ] : const [],
+
+      ),
 
       // 3. Use .when() to handle the 3 states
       body: Column(
         mainAxisSize: MainAxisSize.max,
         children: [
-          FilterBar(label: 'Marks', options: ['All', '1', '2', '3', '4'], onSelected: (value) => ref.read(marksFilterProvider.notifier).set(value), selected: marksFilter),
+          Container(
+            decoration: BoxDecoration(
+              border: Border.symmetric(horizontal: BorderSide(color: Colors.grey, width: 0.75))
+            ),
+            child: Column(
+              children: [
+                FilterBar(label: 'Marks', options: ['All', '1', '2', '3', '4'], onSelected: (value) => ref.read(marksFilterProvider.notifier).set(value), selected: marksFilter),
+              ],
+            ),
+          ),
           questionState.when(
             // CASE A: LOADING (Show spinner)
             loading: () => const Center(
@@ -74,43 +104,67 @@ class QuestionScreen extends ConsumerWidget {
           ),
         ],
       ),
-    );
-  }
-}
-
-// Keep your list items separate for clean code
-class QuestionCard extends StatelessWidget {
-  final Question question;
-  const QuestionCard({required this.question, super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Card(
-      margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
-        child: Column(
-          children: [
-            GptMarkdown(
-                question.text,
-
-            ),
-            const SizedBox(height: 10),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Wrap(
-                  children: [
-                    QuestionTag(question: question, backgroundColor: Color(0xFFE0F2F1), textColor: Color(0xFF00695C), info: '${question.marks.toString()} Marks'),
-                    const SizedBox(width: 5),
-                    QuestionTag(question: question, backgroundColor: Color(0xFFECEFF1), textColor: Color(0xFF475569), info: question.questionType),
-                  ],
-                ),
-              ],
-            )
-          ],
+      bottomNavigationBar: selectedQuestionInfo.count > 0 ?
+      SafeArea(
+        child: Container(
+          height: 100,
+          width: double.infinity,
+          padding: EdgeInsets.symmetric(horizontal: 10),
+          decoration: BoxDecoration(
+              color: Colors.white,
+              border: Border(
+                  top: BorderSide(
+                      color: Colors.grey,
+                      width: 2.0
+                  )
+              ),
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    '${selectedQuestionInfo.count} Questions Selected',
+                    style: TextStyle(
+                      fontSize: 16
+                    )
+                  ),
+                  const SizedBox(height: 5),
+                  Text(
+                    'Total Marks: ${selectedQuestionInfo.marks}',
+                    style: TextStyle(
+                      fontSize: 15,
+                      color: Colors.grey[600]
+                    )
+                  )
+                ],
+              ),
+              Spacer(),
+              TextButton(
+                  style: ButtonStyle(
+                    padding: WidgetStateProperty.all(EdgeInsets.symmetric(horizontal: 20, vertical: 10)),
+                    backgroundColor: WidgetStateProperty.all(Pallete.primaryColor),
+                    shape: WidgetStateProperty.all(RoundedRectangleBorder( borderRadius: BorderRadius.circular(10) ))
+                  ),
+                  onPressed: () => { Navigator.of(context).push(
+                      MaterialPageRoute(
+                          builder: (context) => SelectedQuestionsPreviewScreen()))
+                  }, child: Text(
+                  'Review Paper',
+                  style: TextStyle(
+                    color: Colors.white
+                  ),
+              )
+              )
+            ],
+          ),
         ),
-      )
+      ) : null,
     );
   }
 }
+

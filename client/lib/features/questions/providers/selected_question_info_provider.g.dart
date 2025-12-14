@@ -1,26 +1,28 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'selected_questions_provider.dart';
+part of 'selected_question_info_provider.dart';
 
 // **************************************************************************
 // RiverpodGenerator
 // **************************************************************************
 
-String _$selectedQuestionsHash() => r'6d408951ef6080ddd93bbef6e1489e30d3a0db5a';
+String _$selectedQuestionsInfoHash() =>
+    r'0bedcef6da7be12e76a067f39dd8f8e59571e74b';
 
-/// See also [SelectedQuestions].
-@ProviderFor(SelectedQuestions)
-final selectedQuestionsProvider =
-    NotifierProvider<SelectedQuestions, List<Question>>.internal(
-  SelectedQuestions.new,
-  name: r'selectedQuestionsProvider',
+/// See also [selectedQuestionsInfo].
+@ProviderFor(selectedQuestionsInfo)
+final selectedQuestionsInfoProvider =
+    AutoDisposeProvider<({int count, int marks})>.internal(
+  selectedQuestionsInfo,
+  name: r'selectedQuestionsInfoProvider',
   debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
       ? null
-      : _$selectedQuestionsHash,
+      : _$selectedQuestionsInfoHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );
 
-typedef _$SelectedQuestions = Notifier<List<Question>>;
+typedef SelectedQuestionsInfoRef
+    = AutoDisposeProviderRef<({int count, int marks})>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
