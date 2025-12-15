@@ -33,6 +33,9 @@ class Question{
   @HiveField(9)
   late int marks;
 
+  @HiveField(10)
+  String? answer;
+
 
   Question({
     required this.id,
@@ -43,7 +46,8 @@ class Question{
     required this.imageUrl,
     this.chapter,
     this.standard,
-    required this.marks
+    required this.marks,
+    this.answer
   });
 
 
@@ -53,9 +57,10 @@ class Question{
       text: map['text'] as String,
       questionType: map['type'] as String,
       additionalData: map['data'] != null ? Map<String, dynamic>.from(map['data']) : null,
-      hasImage: map['has_image'] as bool,
+      hasImage: map['has_image'] != null ? map['has_image'] as bool : false,
       imageUrl: map['imageUrl'] != null ? map['imageUrl'] as String : null,
       marks: map['marks'] as int,
+      answer: map['answer']?.toString()
     );
   }
 }

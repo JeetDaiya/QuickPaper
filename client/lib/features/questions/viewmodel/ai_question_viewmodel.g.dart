@@ -1,26 +1,27 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'filtered_questions_provider.dart';
+part of 'ai_question_viewmodel.dart';
 
 // **************************************************************************
 // RiverpodGenerator
 // **************************************************************************
 
-String _$filteredQuestionsHash() => r'2ec3a80c8b3cb3e30dc43eceba93c39a85fcc9df';
+String _$aiQuestionViewmodelHash() =>
+    r'bfbf98e044ba56ca072febf4f4cb8f97432c4e48';
 
-/// See also [filteredQuestions].
-@ProviderFor(filteredQuestions)
-final filteredQuestionsProvider =
-    AutoDisposeFutureProvider<List<Question>>.internal(
-  filteredQuestions,
-  name: r'filteredQuestionsProvider',
+/// See also [AiQuestionViewmodel].
+@ProviderFor(AiQuestionViewmodel)
+final aiQuestionViewmodelProvider = AutoDisposeAsyncNotifierProvider<
+    AiQuestionViewmodel, List<Question>>.internal(
+  AiQuestionViewmodel.new,
+  name: r'aiQuestionViewmodelProvider',
   debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
       ? null
-      : _$filteredQuestionsHash,
+      : _$aiQuestionViewmodelHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );
 
-typedef FilteredQuestionsRef = AutoDisposeFutureProviderRef<List<Question>>;
+typedef _$AiQuestionViewmodel = AutoDisposeAsyncNotifier<List<Question>>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member

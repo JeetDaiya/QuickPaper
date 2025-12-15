@@ -20,6 +20,7 @@ class QuestionViewmodel extends _$QuestionViewmodel {
     state = const AsyncValue.loading();
     try{
       final data = await ref.watch(questionRepositoryProvider).getQuestions();
+      data.sort((a, b) => a.marks - b.marks);
       state = AsyncValue.data(data);
     }
     catch(error){
@@ -27,4 +28,5 @@ class QuestionViewmodel extends _$QuestionViewmodel {
     }
     state = AsyncValue.data(await _fetchData());
   }
+
 }

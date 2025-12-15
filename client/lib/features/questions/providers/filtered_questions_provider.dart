@@ -12,10 +12,13 @@ Future<List<Question>> filteredQuestions(FilteredQuestionsRef ref) async {
 
     return asyncQuestions.when(
         data: (questions){
-            return questions.where((question){
-                bool matchedMarkFilter = question.marks.toString() == marksFilter || marksFilter == 'All';
-                return matchedMarkFilter;
-            }).toList();
+          final data =  questions.where((question){
+            bool matchedMarkFilter = question.marks.toString() == marksFilter || marksFilter == 'All';
+            return matchedMarkFilter;
+          }).toList();
+
+          data.sort((a, b) => a.marks - b.marks);
+          return data;
         },
         error: (e, st)=> [],
         loading: () => []

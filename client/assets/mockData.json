@@ -1,113 +1,99 @@
 {
-  "version": 10,
+  "version": 13,
   "data": [
     {
+      "id": 1,
+      "type": "FILL_BLANK",
+      "marks": 5,
+      "text": "Due to the process of corrosion, ______ colour coating is seen on silver.",
+      "data": {},
+      "has_image": false
+    },
+    {
       "id": 2,
-      "type": "TRUE_FALSE",
+      "type": "FILL_BLANK",
       "marks": 1,
-      "text": "Acharya Nagarjuna learned Buddhist of Nalanda university.",
+      "text": "Alkane which has eight carbon atoms, has ______ number of hydrogen atoms.",
       "data": {},
       "has_image": false
     },
     {
       "id": 3,
-      "type": "TRUE_FALSE",
+      "type": "FILL_BLANK",
       "marks": 1,
-      "text": "Generally available resources are known as easily available resources.",
+      "text": "Deficiency of ______ hormones in childhood leads to Dwarfism.",
       "data": {},
       "has_image": false
     },
     {
       "id": 4,
-      "type": "TRUE_FALSE",
+      "type": "FILL_BLANK",
       "marks": 1,
-      "text": "Rain is the original source of water on earth.",
+      "text": "When Tall pea plant (TT) and Short pea plant (tt) were hybridized, it produced all tall progeny because tallness is ______ trait?",
       "data": {},
       "has_image": false
     },
     {
       "id": 5,
-      "type": "TRUE_FALSE",
+      "type": "FILL_BLANK",
       "marks": 1,
-      "text": "Labour is a non-living factor of production.",
+      "text": "1 kWh = ______ Joule (J).",
       "data": {},
       "has_image": false
     },
     {
       "id": 6,
+      "type": "FILL_BLANK",
+      "marks": 1,
+      "text": "As shown in the figure, the given pyramid shows different Trophic Levels. ______ Trophic Level will receive maximum amount of energy.",
+      "data": {},
+      "has_image": true
+    },
+    {
+      "id": 7,
       "type": "TRUE_FALSE",
       "marks": 1,
-      "text": "Terrorism is just a national problem.",
+      "text": "Methanoic acid is responsible for inflammation from Nettle sting.",
       "data": {},
       "has_image": false
     },
     {
-      "id": 7,
-      "type": "FILL_BLANK",
-      "marks": 1,
-      "text": "____ book is written by Maharshi Charak.",
-      "data": {
-        "options": [
-          "Charak Samhita",
-          "Shushrut Samhita",
-          "Vagbhata Samhita"
-        ]
-      },
-      "has_image": false
-    },
-    {
       "id": 8,
-      "type": "FILL_BLANK",
+      "type": "TRUE_FALSE",
       "marks": 1,
-      "text": "Elephanta Caves are situated in ____ state of India.",
-      "data": {
-        "options": [
-          "Andhra Pradesh",
-          "Maharashtra",
-          "Gujarat"
-        ]
-      },
+      "text": "Salivation, Blood pressure and Vomiting are voluntary actions.",
+      "data": {},
       "has_image": false
     },
     {
       "id": 9,
-      "type": "FILL_BLANK",
+      "type": "TRUE_FALSE",
       "marks": 1,
-      "text": "____ state gets maximum solar energy in India.",
-      "data": {
-        "options": [
-          "Maharashtra",
-          "Gujarat",
-          "Kerala"
-        ]
-      },
+      "text": "Hibiscus has unisexual flowers.",
+      "data": {},
       "has_image": false
     },
     {
       "id": 10,
-      "type": "FILL_BLANK",
+      "type": "TRUE_FALSE",
       "marks": 1,
-      "text": "____ is main economic activity of developing countries.",
-      "data": {
-        "options": [
-          "Agriculture",
-          "Trade",
-          "Industry"
-        ]
-      },
+      "text": "In Domestic electric circuits, live wire has red insulation cover.",
+      "data": {},
       "has_image": false
     },
     {
       "id": 11,
-      "type": "FILL_BLANK",
+      "type": "MCQ",
       "marks": 1,
-      "text": "____ country has the lowest human development index.",
+      "text": "Which of the following metals is refined by Electrolytic refining?",
       "data": {
         "options": [
-          "Norway",
-          "Niger",
-          "Brazil"
-        ]
+          "A) (i) and (ii)",
+          "B) (i) and (iii)",
+          "C) (ii) and (iii)",
+          "D) (iii) and (iv)"
+        ],
+        "answer": null
       },
       "has_image": false
     },
@@ -115,13 +101,13 @@
       "id": 12,
       "type": "MCQ",
       "marks": 1,
-      "text": "Which of the following statement is not correct.",
+      "text": "Which of the following is not a homologous series?",
       "data": {
         "options": [
-          "A) India proved the feeling of \"Vasudhaiva Kutumbakam\" in the world.",
-          "B) \"I am proud to say that I represent the religion that has taught the lesson of compassion and brotherhood to the world!\" Swami Vivekananda.",
-          "C) Indian who believed in tolerance and universal brotherhood even welcomed Dutch and Britishers.",
-          "D) Ancient Indian torch bearers stressed upon economic unity of India."
+          "A) CH4",
+          "B) C2H6",
+          "C) C3H8",
+          "D) C4H8"
         ],
         "answer": null
       },
@@ -131,13 +117,13 @@
       "id": 13,
       "type": "MCQ",
       "marks": 1,
-      "text": "This type of soil is found in the valley and sloppy regions of Himalaya at an altitude of about 2700 to 3000 metres. It's layer is very thin and under developed. What type of soil is it?",
+      "text": "A trait in an organism is influenced by?",
       "data": {
         "options": [
-          "A) Laterite",
-          "B) Mountain",
-          "C) Marshy",
-          "D) Red"
+          "A) Paternal DNA only",
+          "B) Maternal DNA only",
+          "C) Both Paternal and Maternal DNA",
+          "D) Neither Paternal nor Maternal DNA"
         ],
         "answer": null
       },
@@ -147,13 +133,13 @@
       "id": 14,
       "type": "MCQ",
       "marks": 1,
-      "text": "Connect the following multi purpose projects with the beneficiary states and select the correct order:\n(1) Bhakra Nangal\n(2) Kosi\n(3) Nagarjuna Sagar\n(4) Narmada\n(A) Bihar\n(B) Punjab\n(C) Gujarat\n(D) Andhra Pradesh",
+      "text": "Which of the following phenomena is related to the formation of Rainbow?",
       "data": {
         "options": [
-          "A) (1-B), (2-A), (3-C), (4-D)",
-          "B) (1-B), (2-A), (3-D), (4-C)",
-          "C) (1-D), (2-C), (3-B), (4-A)",
-          "D) (1-C), (2-D), (3-A), (4-B)"
+          "A) Dispersion, Refraction and Reflection",
+          "B) Refraction, Dispersion and Total internal reflection",
+          "C) Refraction, Dispersion and internal reflection",
+          "D) Dispersion, Scattering and Total internal reflection"
         ],
         "answer": null
       },
@@ -163,29 +149,29 @@
       "id": 15,
       "type": "MCQ",
       "marks": 1,
-      "text": "When was the world trade organisation established?",
+      "text": "In which of the following circuits, the components are connected properly?",
       "data": {
         "options": [
-          "A) 8-8-1995",
-          "B) 8-3-1995",
-          "C) 1-1-1995",
-          "D) 21-4-1995"
+          "A) (i)",
+          "B) (ii)",
+          "C) (iii)",
+          "D) (iv)"
         ],
         "answer": null
       },
-      "has_image": false
+      "has_image": true
     },
     {
       "id": 16,
       "type": "MCQ",
       "marks": 1,
-      "text": "Naxalist movement in India was originated in which village of West Bengal?",
+      "text": "Which of the following constitute a food - chain?",
       "data": {
         "options": [
-          "A) Naxal bari",
-          "B) Uttar bari",
-          "C) North bari",
-          "D) Uttar purva"
+          "A) Grass, Wheat and Mango",
+          "B) Grass, Goat and Human",
+          "C) Goat, Cow and Elephant",
+          "D) Grass, Fish and Goat"
         ],
         "answer": null
       },
@@ -195,7 +181,7 @@
       "id": 17,
       "type": "SHORT_ANS",
       "marks": 1,
-      "text": "Where do the ropeways located in Gujarat?",
+      "text": "An element has electronic configuration 2, 8, 7. To which group of Modern Periodic Table does it belong?",
       "data": {},
       "has_image": false
     },
@@ -203,7 +189,7 @@
       "id": 18,
       "type": "SHORT_ANS",
       "marks": 1,
-      "text": "Which Indian state has the lowest poverty rate?",
+      "text": "What regulates the exit of food from stomach and releases it in small amounts into the small intestine?",
       "data": {},
       "has_image": false
     },
@@ -211,7 +197,7 @@
       "id": 19,
       "type": "SHORT_ANS",
       "marks": 1,
-      "text": "When is the \"World Elderly day\" celebrated?",
+      "text": "How does the embryo get nourishment inside the mother's body?",
       "data": {},
       "has_image": false
     },
@@ -219,39 +205,39 @@
       "id": 20,
       "type": "SHORT_ANS",
       "marks": 1,
-      "text": "The first \"Earth Conferance 1972\" was organised in which city of Sweden?",
+      "text": "Define power of lens.",
       "data": {},
       "has_image": false
     },
     {
       "id": 21,
       "type": "SHORT_ANS",
-      "marks": 2,
-      "text": "What comprises the natural heritage of India.",
+      "marks": 1,
+      "text": "Write full form of UNEP.",
       "data": {},
       "has_image": false
     },
     {
       "id": 22,
       "type": "SHORT_ANS",
-      "marks": 2,
-      "text": "Explain the reference for which the following statement is made. \"પડી પટોળે ભાત, ફાટે પણ ફીટે નહિ”",
+      "marks": 1,
+      "text": "State Fleming's right-hand rule.",
       "data": {},
       "has_image": false
     },
     {
       "id": 23,
-      "type": "SHORT_ANS",
-      "marks": 2,
-      "text": "Write about the following words:\n(1) Kumin\n(2) Garba",
+      "type": "FILL_BLANK",
+      "marks": 1,
+      "text": "In Modern Periodic Table as we move from left to right the atomic size of elements ______",
       "data": {},
       "has_image": false
     },
     {
       "id": 24,
       "type": "SHORT_ANS",
-      "marks": 2,
-      "text": "Name the pioneers of vastushastra who had contributed immensely to ancient Indian vastushastra.",
+      "marks": 1,
+      "text": "Who am I?\nI am used to make filament of Bulbs.",
       "data": {},
       "has_image": false
     },
@@ -259,7 +245,7 @@
       "id": 25,
       "type": "SHORT_ANS",
       "marks": 2,
-      "text": "Which museums are situated in Gujarat?",
+      "text": "How will you test Acid and Base using Olfactory indicators? Explain it with an example.",
       "data": {},
       "has_image": false
     },
@@ -267,7 +253,7 @@
       "id": 26,
       "type": "SHORT_ANS",
       "marks": 2,
-      "text": "State the importance of multipurpose projects.",
+      "text": "State four properties of Ionic compounds.",
       "data": {},
       "has_image": false
     },
@@ -275,7 +261,7 @@
       "id": 27,
       "type": "SHORT_ANS",
       "marks": 2,
-      "text": "Mention the utility of copper.",
+      "text": "What is Gangue? On what basis Gangue is removed from the Ore?",
       "data": {},
       "has_image": false
     },
@@ -283,7 +269,7 @@
       "id": 28,
       "type": "SHORT_ANS",
       "marks": 2,
-      "text": "State the major places in India where iron is available.",
+      "text": "What were the limitations of Newland's law of Octaves?",
       "data": {},
       "has_image": false
     },
@@ -291,7 +277,7 @@
       "id": 29,
       "type": "SHORT_ANS",
       "marks": 2,
-      "text": "1) I am known as \"Silicon valley of India\" Who am I?\n2) I am called \"Sun rise industries\". Who am I?",
+      "text": "What were the criteria used by Mendeleev in creating his Periodic Table?",
       "data": {},
       "has_image": false
     },
@@ -299,7 +285,7 @@
       "id": 30,
       "type": "SHORT_ANS",
       "marks": 2,
-      "text": "Mumbai and Ahmedabad become the centre for cotton and textile Industry explain.",
+      "text": "What is Lymph? Write its function.",
       "data": {},
       "has_image": false
     },
@@ -307,61 +293,74 @@
       "id": 31,
       "type": "SHORT_ANS",
       "marks": 2,
-      "text": "What is internal trade? Explain with example.",
+      "text": "Draw a ray-diagram for concave mirror when object is placed between Centre of Curvature (C) and Principal Focus (F). Also write Position Nature and size of the image.",
       "data": {},
-      "has_image": false
+      "has_image": true
     },
     {
       "id": 32,
       "type": "SHORT_ANS",
       "marks": 2,
-      "text": "Define:\n1) Per-capita income\n2) Non-economic activity",
+      "text": "An Ophthalmologist, Doctor Desai prescribed power + 1.5 D of corrective lens. Find the focal length of the lens and write the type of lens prescribed.",
       "data": {},
       "has_image": false
     },
     {
       "id": 33,
-      "type": "SHORT_ANS",
+      "type": "MATCH_PAIRS",
       "marks": 2,
-      "text": "Which steps have been taken to conserve environment.",
-      "data": {},
-      "has_image": false
-    },
-    {
-      "id": 34,
-      "type": "MAP_WORK",
-      "marks": 3,
-      "text": "Mark and list the places of cultural heritage of India in Gujarat, Maharashtra, Uttar Pradesh on the basis of given map of India.",
+      "text": "Match the following :",
       "data": {
-        "labels_to_find": [
-          "Cultural heritage places in Gujarat",
-          "Cultural heritage places in Maharashtra",
-          "Cultural heritage places in Uttar Pradesh"
+        "pairs": [
+          {
+            "left": "1. Plug key (Open)",
+            "right": "A) Symbol for open switch"
+          },
+          {
+            "left": "2. Plug key (Closed)",
+            "right": "B) Symbol for closed switch"
+          },
+          {
+            "left": "3. Wire crossing without joining",
+            "right": "C) Symbol for wires crossing without connection"
+          },
+          {
+            "left": "4. A wire joint",
+            "right": "D) Symbol for a wire joint"
+          }
         ]
       },
       "has_image": true
     },
     {
+      "id": 34,
+      "type": "SHORT_ANS",
+      "marks": 2,
+      "text": "What is a Solenoid? Give the characteristics of magnetic field resulting from Solenoid.",
+      "data": {},
+      "has_image": false
+    },
+    {
       "id": 35,
       "type": "SHORT_ANS",
-      "marks": 3,
-      "text": "Names of famous persons related to ancient Indian universities like Nalanda, Takshashila, Varanasi and Vallabhi are given in the box below match and write as they related.\n→ Mahavir Swami → Bhagwan Buddha Kumar Gupta\n→ Grammarian panini → Chandragupta Maurya → Acharya Gunmati\n→ Adi Shankaracharya → Chinese traveller Itsingh → Chinese traveller Hiuen-Tsang\n→ Acharya Sthirmati ← Chaitanya Mahaprabhu → Politician Kautilya",
+      "marks": 2,
+      "text": "What precautions should be taken to avoid the overloading of domestic electric circuits?",
       "data": {},
       "has_image": false
     },
     {
       "id": 36,
-      "type": "LONG_ANS",
-      "marks": 3,
-      "text": "Write about architectural style of Taj Mahal.",
+      "type": "SHORT_ANS",
+      "marks": 2,
+      "text": "What can you as an individual do to reduce your consumption of the various natural resources?",
       "data": {},
       "has_image": false
     },
     {
       "id": 37,
-      "type": "LONG_ANS",
-      "marks": 3,
-      "text": "What is soil erosion and how to prevent them?",
+      "type": "SHORT_ANS",
+      "marks": 2,
+      "text": "State the advantages of water stored in the ground.",
       "data": {},
       "has_image": false
     },
@@ -369,7 +368,7 @@
       "id": 38,
       "type": "LONG_ANS",
       "marks": 3,
-      "text": "Explain the reasons for the distruction of wild life.",
+      "text": "Write one equation each for decomposition reactions where energy is supplied in the form of heat, light or electricity.",
       "data": {},
       "has_image": false
     },
@@ -377,7 +376,7 @@
       "id": 39,
       "type": "LONG_ANS",
       "marks": 3,
-      "text": "What is poverty? What are the characteristics of people living below poverty line?",
+      "text": "Write the chemical formula, preparation and uses of Bleaching powder.",
       "data": {},
       "has_image": false
     },
@@ -385,7 +384,7 @@
       "id": 40,
       "type": "LONG_ANS",
       "marks": 3,
-      "text": "Write the types and ways of consumer exploitation.",
+      "text": "Take three test tubes and place clean iron nails in each of them.\nLabel these test tubes A, B and C\nPour some water in test tube 'A' and cork it.\nPour boiled distilled water in test tube 'B' add about 1 ml of oil and cork it.\nPut some anhydrous Calcium chloride in test tube 'C' and cork it.\nLeave these test tubes for few days, write your observation for all three test tubes and regarding your observation give reason.",
       "data": {},
       "has_image": false
     },
@@ -393,7 +392,7 @@
       "id": 41,
       "type": "LONG_ANS",
       "marks": 3,
-      "text": "Explain the difference between rebellion and terrorism.",
+      "text": "Write three differences between Autotrophic Nutrition and Heterotrophic Nutrition.",
       "data": {},
       "has_image": false
     },
@@ -401,46 +400,47 @@
       "id": 42,
       "type": "LONG_ANS",
       "marks": 3,
-      "text": "Write the reasons for gender inequality in India.",
+      "text": "Draw neat and labeled diagram of Human brain.",
+      "data": {},
+      "has_image": true
+    },
+    {
+      "id": 43,
+      "type": "LONG_ANS",
+      "marks": 3,
+      "text": "What is puberty? What sexual changes are seen during puberty?",
       "data": {},
       "has_image": false
     },
     {
       "id": 44,
       "type": "LONG_ANS",
-      "marks": 4,
-      "text": "Write a note on discoveries made by Aryabhatta in mathematics.",
+      "marks": 3,
+      "text": "What are fossils? What do they tell us about the process of evolution?",
       "data": {},
       "has_image": false
     },
     {
       "id": 45,
       "type": "LONG_ANS",
-      "marks": 4,
-      "text": "Give the difference between Kharif Crop-Rabi Crop",
+      "marks": 3,
+      "text": "Explain series connection of Resistors and derive the formula of equivalent resistance.",
       "data": {},
       "has_image": false
     },
     {
       "id": 46,
       "type": "LONG_ANS",
-      "marks": 4,
-      "text": "Identify the following crops in the pictures given and write a note on these crops with reference to (temperature, soil, rain and producing state.)\n1)\nand\n2)",
-      "data": {
-        "hints": [
-          "temperature",
-          "soil",
-          "rain",
-          "producing state"
-        ]
-      },
-      "has_image": true
+      "marks": 3,
+      "text": "How is ozone formed? Write importance of ozone layer.",
+      "data": {},
+      "has_image": false
     },
     {
       "id": 47,
       "type": "LONG_ANS",
       "marks": 4,
-      "text": "Explain the types of unemployment.",
+      "text": "Describe an experiment to show Reaction between Zinc granules and dilute H2SO4.",
       "data": {},
       "has_image": false
     },
@@ -448,62 +448,55 @@
       "id": 48,
       "type": "LONG_ANS",
       "marks": 4,
-      "text": "Write the full form of the following and name the products where they used. ISI, FPO, MPO, HACCP",
+      "text": "Give chemical formula and draw the electron-dot structure of the following compounds.\ni) Ethane\nii) Ethanoic acid",
       "data": {},
-      "has_image": false
+      "has_image": true
     },
     {
       "id": 49,
       "type": "LONG_ANS",
       "marks": 4,
-      "text": "What do you mean by child labour? Where do you found the child labour? State the remedies to abolish child labour.",
+      "text": "Explain in detail the Blood circulation in human heart (Diagram not required).",
       "data": {},
       "has_image": false
     },
     {
       "id": 50,
-      "type": "MAP_WORK",
+      "type": "LONG_ANS",
       "marks": 4,
-      "text": "Show the following places with proper symbols at their proper places in the given outlined map of India.",
-      "data": {
-        "labels_to_find": [
-          "Desert soil",
-          "Gir National park",
-          "Textile Industry (Mumbai)",
-          "Tea producing states"
-        ]
-      },
+      "text": "What is asexual reproduction? Explain Budding and Spore formation with diagram.",
+      "data": {},
       "has_image": true
     },
     {
       "id": 51,
-      "type": "SHORT_ANS",
-      "marks": 1,
-      "text": "For Blind Candidates: (1) Where do we found desert soil?",
+      "type": "LONG_ANS",
+      "marks": 4,
+      "text": "Define the following terms related to spherical lens.\ni) Centre of curvature\nii) Principal focus\niii) Optical centre\niv) Focal length",
       "data": {},
       "has_image": false
     },
     {
       "id": 52,
-      "type": "SHORT_ANS",
-      "marks": 1,
-      "text": "For Blind Candidates: (2) Gir National park is situated in which state of India?",
+      "type": "LONG_ANS",
+      "marks": 4,
+      "text": "Yashvi, student of standard 10th is sitting at the back of the classroom and is not able to read writings on the blackboard clearly, then what defect of vision she has? Explain. How can it be corrected [Diagram necessary].",
       "data": {},
-      "has_image": false
+      "has_image": true
     },
     {
       "id": 53,
-      "type": "SHORT_ANS",
-      "marks": 1,
-      "text": "For Blind Candidates: (3) Which is the main centre for cotton textile Industry in Maharashtra?",
+      "type": "LONG_ANS",
+      "marks": 4,
+      "text": "State principle and explain working of Electric generator with diagram.",
       "data": {},
-      "has_image": false
+      "has_image": true
     },
     {
       "id": 54,
-      "type": "SHORT_ANS",
-      "marks": 1,
-      "text": "For Blind Candidates: (4) Which is the main tea producing state in India.",
+      "type": "LONG_ANS",
+      "marks": 4,
+      "text": "State advantages and major hazards of Nuclear Energy.",
       "data": {},
       "has_image": false
     }

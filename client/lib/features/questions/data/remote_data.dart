@@ -18,7 +18,7 @@ class QuestionRemoteDataSource{
 
   final String _baseUrl = 'assets/mockData.json';
 
-  Future<List<Question>>getQuestions()async {
+  Future<List<Question>>getQuestions() async {
     final jsonString = await rootBundle.loadString(_baseUrl);
     final Map<String, dynamic> jsonList = json.decode(jsonString);
     final List<dynamic> questionList = jsonList['data'];

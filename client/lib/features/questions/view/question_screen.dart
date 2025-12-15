@@ -3,13 +3,11 @@ import 'package:client/features/questions/providers/filtered_questions_provider.
 import 'package:client/features/questions/providers/marks_filter_provider.dart';
 import 'package:client/features/questions/providers/selected_question_info_provider.dart';
 import 'package:client/features/questions/providers/selected_questions_provider.dart';
-import 'package:client/features/questions/view/pdf_preview_screen.dart';
 import 'package:client/features/questions/view/selected_questions_preview_screen.dart';
 import 'package:client/features/questions/viewmodel/question_viewmodel.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:pdf/pdf.dart';
-import '../services/question_pdf_service.dart';
+import '../providers/marks_options_provider.dart';
 import '../widgets/filter_bar.dart';
 import '../widgets/question_card.dart';
 
@@ -26,6 +24,9 @@ class QuestionScreen extends ConsumerWidget {
     final questionState = ref.watch(filteredQuestionsProvider);
     final marksFilter = ref.watch(marksFilterProvider.select((value) => value));
     final selectedQuestionInfo = ref.watch(selectedQuestionsInfoProvider);
+    final marksOptions = ref.watch(marksOptionsProvider);
+
+    // 5. Use .when()
     return Scaffold(
       appBar: AppBar(
           title: const Text("Questions"),
@@ -53,7 +54,7 @@ class QuestionScreen extends ConsumerWidget {
             ),
             child: Column(
               children: [
-                FilterBar(label: 'Marks', options: ['All', '1', '2', '3', '4'], onSelected: (value) => ref.read(marksFilterProvider.notifier).set(value), selected: marksFilter),
+                FilterBar(label: 'Marks', options: marksOptions, onSelected: (value) => ref.read(marksFilterProvider.notifier).set(value), selected: marksFilter),
               ],
             ),
           ),

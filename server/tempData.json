@@ -1,0 +1,186 @@
+[
+  {
+    "id": 1,
+    "text": "The gap between two neurons across which an electrical impulse is transmitted is called a:",
+    "marks": 1,
+    "type": "MCQ",
+    "data": {
+      "options": [
+        "A) Dendrite",
+        "B) Synapse",
+        "C) Axon",
+        "D) Impulse"
+      ]
+    },
+    "answer": "B) Synapse"
+  },
+  {
+    "id": 2,
+    "text": "When plants detect light, a hormone called _____, synthesised at the shoot tip, helps the cells to grow longer.",
+    "marks": 1,
+    "type": "FILL_BLANKS",
+    "data": {
+      "sentence": "When plants detect light, a hormone called _____, synthesised at the shoot tip, helps the cells to grow longer."
+    },
+    "answer": "auxin"
+  },
+  {
+    "id": 3,
+    "text": "What is a reflex arc? Where are reflex arcs typically formed in the human body?",
+    "marks": 2,
+    "type": "SHORT_ANS",
+    "data": {},
+    "answer": "A reflex arc is a neural pathway that mediates a reflex action, allowing for quick responses without conscious thought. It involves a connection between an input nerve and an output nerve. Reflex arcs are typically formed in the spinal cord."
+  },
+  {
+    "id": 4,
+    "text": "Match the parts of the human brain with their primary functions.",
+    "marks": 1,
+    "type": "MATCH_PAIRS",
+    "data": {
+      "pairs": [
+        {
+          "left": "Fore-brain",
+          "right": "Thinking and sensory interpretation"
+        },
+        {
+          "left": "Medulla",
+          "right": "Involuntary actions (blood pressure, salivation)"
+        },
+        {
+          "left": "Cerebellum",
+          "right": "Posture and balance"
+        }
+      ]
+    },
+    "answer": "Fore-brain: Thinking and sensory interpretation; Medulla: Involuntary actions (blood pressure, salivation); Cerebellum: Posture and balance."
+  },
+  {
+    "id": 5,
+    "text": "Electrical impulses in a neuron travel from the axon to the cell body and then to the dendrite.",
+    "marks": 1,
+    "type": "TRUE_FALSE",
+    "data": {},
+    "answer": "False"
+  },
+  {
+    "id": 6,
+    "text": "Explain how the leaves of a sensitive plant (Mimosa pudica) respond to touch.",
+    "marks": 2,
+    "type": "SHORT_ANS",
+    "data": {},
+    "answer": "When a sensitive plant is touched, information is communicated via electrical-chemical means. Plant cells respond by changing their shape due to alterations in the amount of water within them, leading to swelling or shrinking, which causes the leaves to fold up and droop quickly."
+  },
+  {
+    "id": 7,
+    "text": "Compare and contrast the nervous and hormonal mechanisms for control and coordination in animals, highlighting their advantages and limitations.",
+    "marks": 4,
+    "type": "LONG_ANS",
+    "data": {},
+    "answer": "Outline:\n-   **Nervous System:** Uses electrical impulses; rapid, precise, short-lived responses; information travels through specialized neurons; limited to cells connected by nervous tissue. Advantage: Speed. Limitation: Localized, transient.\n-   **Hormonal System:** Uses chemical signals (hormones) transported via bloodstream; generally slower, widespread, long-lasting responses; can reach all cells of the body. Advantage: Widespread, persistent. Limitation: Slower.\n-   Both are crucial for overall coordination, complementing each other for different types of bodily control."
+  },
+  {
+    "id": 8,
+    "text": "Which gland is responsible for secreting growth hormone?",
+    "marks": 1,
+    "type": "MCQ",
+    "data": {
+      "options": [
+        "A) Thyroid gland",
+        "B) Pancreas",
+        "C) Pituitary gland",
+        "D) Adrenal gland"
+      ]
+    },
+    "answer": "C) Pituitary gland"
+  },
+  {
+    "id": 9,
+    "text": "The brain is protected by a bony box called the _____ and is cushioned by a fluid-filled _____.",
+    "marks": 1,
+    "type": "FILL_BLANKS",
+    "data": {
+      "sentence": "The brain is protected by a bony box called the _____ and is cushioned by a fluid-filled _____."
+    },
+    "answer": "cranium (skull), balloon"
+  },
+  {
+    "id": 10,
+    "text": "What are receptors, and where are they typically located in the human body? Give two examples.",
+    "marks": 2,
+    "type": "SHORT_ANS",
+    "data": {},
+    "answer": "Receptors are specialized tips of nerve cells that detect information from the environment. They are typically located in sense organs. Examples include gustatory receptors (for taste in the tongue) and olfactory receptors (for smell in the nose)."
+  },
+  {
+    "id": 11,
+    "text": "Plant roots typically show positive phototropism, growing towards light.",
+    "marks": 1,
+    "type": "TRUE_FALSE",
+    "data": {},
+    "answer": "False"
+  },
+  {
+    "id": 12,
+    "text": "Complete the following table by filling in the missing hormone, endocrine gland, or function.",
+    "marks": 3,
+    "type": "TABLE_DATA",
+    "data": {
+      "headers": [
+        "S.No.",
+        "Hormone",
+        "Endocrine Gland",
+        "Functions"
+      ],
+      "rows": [
+        [
+          "1.",
+          "Growth hormone",
+          "Pituitary gland",
+          ""
+        ],
+        [
+          "2.",
+          "",
+          "Thyroid gland",
+          "Regulates metabolism for body growth"
+        ],
+        [
+          "3.",
+          "Insulin",
+          "",
+          "Regulates blood sugar level"
+        ]
+      ]
+    },
+    "answer": "1. Growth hormone - Pituitary gland - Stimulates growth in all organs; 2. Thyroxin - Thyroid gland - Regulates metabolism for body growth; 3. Insulin - Pancreas - Regulates blood sugar level."
+  },
+  {
+    "id": 13,
+    "text": "Describe the role of adrenaline in the 'fight or flight' response in animals.",
+    "marks": 4,
+    "type": "LONG_ANS",
+    "data": {},
+    "answer": "Outline:\n-   Adrenaline is secreted by the adrenal glands into the blood during stressful or dangerous situations.\n-   It prepares the body for 'fight or flight' by:\n    -   Increasing heart rate, enhancing oxygen supply to muscles.\n    -   Reducing blood flow to the digestive system and skin, diverting it to skeletal muscles.\n    -   Increasing breathing rate.\n-   These changes collectively enable the animal to respond quickly to threats."
+  },
+  {
+    "id": 14,
+    "text": "Correct the factual error in the following sentence: 'Deficiency of calcium in the diet can lead to goitre.'",
+    "marks": 2,
+    "type": "ERROR_CORRECTION",
+    "data": {
+      "sentence": "Deficiency of calcium in the diet can lead to goitre.",
+      "error": "calcium",
+      "correction": "iodine"
+    },
+    "answer": "Deficiency of iodine in the diet can lead to goitre."
+  },
+  {
+    "id": 15,
+    "text": "Name two plant hormones that promote growth and one plant hormone that inhibits growth.",
+    "marks": 2,
+    "type": "SHORT_ANS",
+    "data": {},
+    "answer": "Growth-promoting hormones: Auxin, Gibberellins (or Cytokinins). Growth-inhibiting hormone: Abscisic acid."
+  }
+]

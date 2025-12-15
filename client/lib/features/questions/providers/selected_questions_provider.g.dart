@@ -6,7 +6,7 @@ part of 'selected_questions_provider.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$selectedQuestionsHash() => r'6d408951ef6080ddd93bbef6e1489e30d3a0db5a';
+String _$selectedQuestionsHash() => r'3acb572af452bfaf047016d089dfe8b89bb9fddf';
 
 /// See also [SelectedQuestions].
 @ProviderFor(SelectedQuestions)

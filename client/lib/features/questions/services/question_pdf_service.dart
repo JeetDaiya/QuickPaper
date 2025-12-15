@@ -1,8 +1,6 @@
 import 'package:flutter/services.dart';
-import 'package:printing/printing.dart';
 import 'package:pdf/pdf.dart';
 import '../../../core/hive/models/question_model.dart';
-
 import 'package:pdf/widgets.dart' as pw;
 
 class NormalPdfService {
