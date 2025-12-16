@@ -10,12 +10,16 @@ enum SelectionResult{
     limitExceeded,
 }
 
-const int totalMarks = 20;
+const int totalMarks = 108;
 
 @Riverpod(keepAlive: true)
 class SelectedQuestions extends _$SelectedQuestions {
 @override
 List<Question> build() => [];
+
+int get _currentMarks =>
+    state.fold(0, (sum, q) => sum + q.marks);
+
 
 
 SelectionResult toggle(Question question){
@@ -23,7 +27,7 @@ SelectionResult toggle(Question question){
     state = state.where((element) => element != question).toList();
     return SelectionResult.removed;
   }
-  if(totalMarks + question.marks > 100){
+  if(_currentMarks + question.marks > totalMarks){
     return SelectionResult.limitExceeded;
   }
 

@@ -1,20 +1,12 @@
 import 'package:client/core/hive/models/question_model.dart';
 import 'package:client/core/theme/app_pallete.dart';
+import 'package:client/features/questions/widgets/question_body.dart';
 import 'package:client/features/questions/widgets/question_tag.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
 import '../providers/selected_questions_provider.dart';
 
 
-Map<String,String>questionTypeMap = {
-  'TRUE_FALSE': 'True False',
-  'FILL_BLANK': 'Fill in the blank',
-  'MCQ': 'MCQ',
-  'MATCH': 'Match the pairs',
-  'SHORT_ANS': 'Short answer',
-  'LONG_ANS': 'Long answer',
-
-};
 
 
 class QuestionCard extends ConsumerWidget {
@@ -46,6 +38,8 @@ class QuestionCard extends ConsumerWidget {
                   fontWeight: FontWeight.w500,
                 ),
               ),
+              const SizedBox(height: 8),
+              QuestionBody(question: question),
               const SizedBox(height: 10),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -54,7 +48,7 @@ class QuestionCard extends ConsumerWidget {
                     children: [
                       QuestionTag(question: question, backgroundColor: Color(0xFFE0F2F1), textColor: Color(0xFF00695C), info: '${question.marks.toString()} Marks'),
                       const SizedBox(width: 5),
-                      QuestionTag(question: question, backgroundColor: Color(0xFFECEFF1), textColor: Color(0xFF475569), info: questionTypeMap[question.questionType] ?? 'Unknown'),
+                      QuestionTag(question: question, backgroundColor: Color(0xFFECEFF1), textColor: Color(0xFF475569), info: question.questionType),
                     ],
                   ),
                   GestureDetector(

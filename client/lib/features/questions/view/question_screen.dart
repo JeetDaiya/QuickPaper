@@ -1,13 +1,16 @@
 import 'package:client/core/theme/app_pallete.dart';
 import 'package:client/features/questions/providers/filtered_questions_provider.dart';
 import 'package:client/features/questions/providers/marks_filter_provider.dart';
+import 'package:client/features/questions/providers/question_type_filter_provider.dart';
 import 'package:client/features/questions/providers/selected_question_info_provider.dart';
 import 'package:client/features/questions/providers/selected_questions_provider.dart';
+import 'package:client/features/questions/view/ai_question_dialog.dart';
 import 'package:client/features/questions/view/selected_questions_preview_screen.dart';
 import 'package:client/features/questions/viewmodel/question_viewmodel.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../providers/marks_options_provider.dart';
+import '../providers/question_type_options_provider.dart';
 import '../widgets/filter_bar.dart';
 import '../widgets/question_card.dart';
 
@@ -23,8 +26,10 @@ class QuestionScreen extends ConsumerWidget {
     // This variable 'questionState' is an AsyncValue (it holds data, error, or loading)
     final questionState = ref.watch(filteredQuestionsProvider);
     final marksFilter = ref.watch(marksFilterProvider.select((value) => value));
+    final questionTypeFilter = ref.watch(questionTypeFilterProvider.select((value) => value));
     final selectedQuestionInfo = ref.watch(selectedQuestionsInfoProvider);
     final marksOptions = ref.watch(marksOptionsProvider);
+    final questionTypeOptions = ref.watch(questionTypeOptionsProvider);
 
     // 5. Use .when()
     return Scaffold(
@@ -54,7 +59,36 @@ class QuestionScreen extends ConsumerWidget {
             ),
             child: Column(
               children: [
+                const SizedBox(height: 10),
+                GestureDetector(
+                  onTap: (){
+                    showDialog(context: context, builder: (context) => const AiQuestionDialog());
+                  },
+                  child: Container(
+                    height: 40,
+                    width: double.infinity,
+                    margin: EdgeInsets.symmetric(horizontal: 8),
+                    alignment: Alignment.center,
+                    decoration: BoxDecoration(
+                      color: Colors.purple,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        ImageIcon(
+                          const AssetImage('assets/images/ai_generated.png'),
+                          color: Colors.white,
+                        ),
+                        const SizedBox(width: 5),
+                        Text('Generate Questions with AI', style: const TextStyle(color: Colors.white)),
+                      ],
+                    ),
+                  ),
+                ),
                 FilterBar(label: 'Marks', options: marksOptions, onSelected: (value) => ref.read(marksFilterProvider.notifier).set(value), selected: marksFilter),
+                FilterBar(label: 'Type', options: questionTypeOptions, onSelected: (value) => ref.read(questionTypeFilterProvider.notifier).set(value), selected: questionTypeFilter),
               ],
             ),
           ),

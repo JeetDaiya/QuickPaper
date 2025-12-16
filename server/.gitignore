@@ -82,3 +82,5 @@ tmp/
 .render/
 
 .early.coverage
+
+*.pdf

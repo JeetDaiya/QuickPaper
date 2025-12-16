@@ -13,16 +13,13 @@ class StatWidget extends ConsumerWidget {
 
     return statState.when(
       data: (stat) => Center(
-        child: Padding(
-          padding: const EdgeInsets.only(top: 10),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              StatInfoCard(backgroundColor: Color.fromARGB(255, 179, 247, 227), icon:  Icons.insert_drive_file_rounded, iconColor: Color.fromARGB(255, 26, 150, 136), text1: stat.paperCreated.toString(), text2: 'Papers Created'),
-              StatInfoCard(text1: stat.totalQuestions.toString(), text2: 'Questions in\nbank', icon: Icons.question_answer, backgroundColor: Color.fromARGB(255, 239, 246, 255), iconColor: Color.fromARGB(255, 23, 95, 252)),
-            ],
-          ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            StatInfoCard(backgroundColor: Color.fromARGB(255, 179, 247, 227), icon:  Icons.insert_drive_file_rounded, iconColor: Color.fromARGB(255, 26, 150, 136), text1: stat.paperCreated.toString(), text2: 'Papers Created'),
+            StatInfoCard(text1: stat.totalQuestions.toString(), text2: 'Questions in\nbank', icon: Icons.question_answer, backgroundColor: Color.fromARGB(255, 239, 246, 255), iconColor: Color.fromARGB(255, 23, 95, 252)),
+          ],
         ),
       ),
       error: (error, stackTrace) => Center(

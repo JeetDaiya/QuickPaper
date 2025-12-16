@@ -1,504 +1,983 @@
 {
-  "version": 13,
+  "version": 15,
   "data": [
     {
+      "type": "MCQ",
+      "marks": 1,
+      "text": "Water is removed when substance 'X' is heated, as well as its color changes from green, then substance X =",
+      "data": {
+        "options": [
+          "A) CaSO4",
+          "B) CuSO4",
+          "C) FeSO4",
+          "D) BaSO4"
+        ],
+        "answer": null
+      },
       "id": 1,
-      "type": "FILL_BLANK",
-      "marks": 5,
-      "text": "Due to the process of corrosion, ______ colour coating is seen on silver.",
-      "data": {},
-      "has_image": false
+      "subject": "sci"
     },
     {
+      "type": "MCQ",
+      "marks": 1,
+      "text": "Name of the below compound from its structure.",
+      "data": {
+        "options": [
+          "A) Ethane",
+          "B) Ethanol",
+          "C) Ethene",
+          "D) Propanol"
+        ],
+        "answer": null
+      },
       "id": 2,
-      "type": "FILL_BLANK",
-      "marks": 1,
-      "text": "Alkane which has eight carbon atoms, has ______ number of hydrogen atoms.",
-      "data": {},
-      "has_image": false
+      "subject": "sci"
     },
     {
+      "type": "MCQ",
+      "marks": 1,
+      "text": "Which is not part of human female reproductive system, as mention below?",
+      "data": {
+        "options": [
+          "A) Ovary",
+          "B) Uterus",
+          "C) Fallopian tube",
+          "D) Vas deferens"
+        ],
+        "answer": null
+      },
       "id": 3,
-      "type": "FILL_BLANK",
-      "marks": 1,
-      "text": "Deficiency of ______ hormones in childhood leads to Dwarfism.",
-      "data": {},
-      "has_image": false
+      "subject": "sci"
     },
     {
+      "type": "MCQ",
+      "marks": 1,
+      "text": "To check Ohm's law, teacher says students to join circuit and students join circuit as below. Teacher asked the question to students. Which component is not properly connected in circuit?",
+      "data": {
+        "options": [
+          "A) Voltmeter",
+          "B) Resistance",
+          "C) Ammeter",
+          "D) Battery"
+        ],
+        "answer": null
+      },
       "id": 4,
-      "type": "FILL_BLANK",
-      "marks": 1,
-      "text": "When Tall pea plant (TT) and Short pea plant (tt) were hybridized, it produced all tall progeny because tallness is ______ trait?",
-      "data": {},
-      "has_image": false
+      "subject": "sci"
     },
     {
+      "type": "FILL_BLANK",
+      "marks": 1,
+      "text": "Number of maximum electrons in any orbit is depend on ______ formula.",
+      "data": {},
       "id": 5,
-      "type": "FILL_BLANK",
-      "marks": 1,
-      "text": "1 kWh = ______ Joule (J).",
-      "data": {},
-      "has_image": false
+      "subject": "sci"
     },
     {
+      "type": "FILL_BLANK",
+      "marks": 1,
+      "text": "Plasmodium, divide into many daughter cells simultaneously by ______.",
+      "data": {},
       "id": 6,
-      "type": "FILL_BLANK",
-      "marks": 1,
-      "text": "As shown in the figure, the given pyramid shows different Trophic Levels. ______ Trophic Level will receive maximum amount of energy.",
-      "data": {},
-      "has_image": true
+      "subject": "sci"
     },
     {
+      "type": "FILL_BLANK",
+      "marks": 1,
+      "text": "Prakash Padukone was player of badminton as well as he is father of famous actress Deepika Padukone, neither game or acting is part of heridity because there is a no change in reproductive cells of ______.",
+      "data": {},
       "id": 7,
-      "type": "TRUE_FALSE",
-      "marks": 1,
-      "text": "Methanoic acid is responsible for inflammation from Nettle sting.",
-      "data": {},
-      "has_image": false
+      "subject": "sci"
     },
     {
-      "id": 8,
-      "type": "TRUE_FALSE",
-      "marks": 1,
-      "text": "Salivation, Blood pressure and Vomiting are voluntary actions.",
-      "data": {},
-      "has_image": false
-    },
-    {
-      "id": 9,
-      "type": "TRUE_FALSE",
-      "marks": 1,
-      "text": "Hibiscus has unisexual flowers.",
-      "data": {},
-      "has_image": false
-    },
-    {
-      "id": 10,
-      "type": "TRUE_FALSE",
-      "marks": 1,
-      "text": "In Domestic electric circuits, live wire has red insulation cover.",
-      "data": {},
-      "has_image": false
-    },
-    {
-      "id": 11,
-      "type": "MCQ",
-      "marks": 1,
-      "text": "Which of the following metals is refined by Electrolytic refining?",
-      "data": {
-        "options": [
-          "A) (i) and (ii)",
-          "B) (i) and (iii)",
-          "C) (ii) and (iii)",
-          "D) (iii) and (iv)"
-        ],
-        "answer": null
-      },
-      "has_image": false
-    },
-    {
-      "id": 12,
-      "type": "MCQ",
-      "marks": 1,
-      "text": "Which of the following is not a homologous series?",
-      "data": {
-        "options": [
-          "A) CH4",
-          "B) C2H6",
-          "C) C3H8",
-          "D) C4H8"
-        ],
-        "answer": null
-      },
-      "has_image": false
-    },
-    {
-      "id": 13,
-      "type": "MCQ",
-      "marks": 1,
-      "text": "A trait in an organism is influenced by?",
-      "data": {
-        "options": [
-          "A) Paternal DNA only",
-          "B) Maternal DNA only",
-          "C) Both Paternal and Maternal DNA",
-          "D) Neither Paternal nor Maternal DNA"
-        ],
-        "answer": null
-      },
-      "has_image": false
-    },
-    {
-      "id": 14,
-      "type": "MCQ",
-      "marks": 1,
-      "text": "Which of the following phenomena is related to the formation of Rainbow?",
-      "data": {
-        "options": [
-          "A) Dispersion, Refraction and Reflection",
-          "B) Refraction, Dispersion and Total internal reflection",
-          "C) Refraction, Dispersion and internal reflection",
-          "D) Dispersion, Scattering and Total internal reflection"
-        ],
-        "answer": null
-      },
-      "has_image": false
-    },
-    {
-      "id": 15,
-      "type": "MCQ",
-      "marks": 1,
-      "text": "In which of the following circuits, the components are connected properly?",
-      "data": {
-        "options": [
-          "A) (i)",
-          "B) (ii)",
-          "C) (iii)",
-          "D) (iv)"
-        ],
-        "answer": null
-      },
-      "has_image": true
-    },
-    {
-      "id": 16,
-      "type": "MCQ",
-      "marks": 1,
-      "text": "Which of the following constitute a food - chain?",
-      "data": {
-        "options": [
-          "A) Grass, Wheat and Mango",
-          "B) Grass, Goat and Human",
-          "C) Goat, Cow and Elephant",
-          "D) Grass, Fish and Goat"
-        ],
-        "answer": null
-      },
-      "has_image": false
-    },
-    {
-      "id": 17,
-      "type": "SHORT_ANS",
-      "marks": 1,
-      "text": "An element has electronic configuration 2, 8, 7. To which group of Modern Periodic Table does it belong?",
-      "data": {},
-      "has_image": false
-    },
-    {
-      "id": 18,
-      "type": "SHORT_ANS",
-      "marks": 1,
-      "text": "What regulates the exit of food from stomach and releases it in small amounts into the small intestine?",
-      "data": {},
-      "has_image": false
-    },
-    {
-      "id": 19,
-      "type": "SHORT_ANS",
-      "marks": 1,
-      "text": "How does the embryo get nourishment inside the mother's body?",
-      "data": {},
-      "has_image": false
-    },
-    {
-      "id": 20,
-      "type": "SHORT_ANS",
-      "marks": 1,
-      "text": "Define power of lens.",
-      "data": {},
-      "has_image": false
-    },
-    {
-      "id": 21,
-      "type": "SHORT_ANS",
-      "marks": 1,
-      "text": "Write full form of UNEP.",
-      "data": {},
-      "has_image": false
-    },
-    {
-      "id": 22,
-      "type": "SHORT_ANS",
-      "marks": 1,
-      "text": "State Fleming's right-hand rule.",
-      "data": {},
-      "has_image": false
-    },
-    {
-      "id": 23,
       "type": "FILL_BLANK",
       "marks": 1,
-      "text": "In Modern Periodic Table as we move from left to right the atomic size of elements ______",
+      "text": "______ is used to measure power of lens.",
       "data": {},
-      "has_image": false
+      "id": 8,
+      "subject": "sci"
     },
     {
-      "id": 24,
+      "type": "TRUE_FALSE",
+      "marks": 1,
+      "text": "There is a single bond present between carbon-carbon atoms of unsaturated hydrocarbon.",
+      "data": {},
+      "id": 9,
+      "subject": "sci"
+    },
+    {
+      "type": "TRUE_FALSE",
+      "marks": 1,
+      "text": "Sexual reproduction involves two individuals for the creation of a new individuals.",
+      "data": {},
+      "id": 10,
+      "subject": "sci"
+    },
+    {
+      "type": "TRUE_FALSE",
+      "marks": 1,
+      "text": "Solar cooker achieve a higher temperature by using convex mirror to focus the rays of the sun.",
+      "data": {},
+      "id": 11,
+      "subject": "sci"
+    },
+    {
       "type": "SHORT_ANS",
       "marks": 1,
-      "text": "Who am I?\nI am used to make filament of Bulbs.",
+      "text": "Write periodic law of Mendeleev.",
       "data": {},
-      "has_image": false
+      "id": 12,
+      "subject": "sci"
     },
     {
+      "type": "SHORT_ANS",
+      "marks": 1,
+      "text": "Write the chemical name of substance which is used by doctor to cure bone fracture.",
+      "data": {},
+      "id": 13,
+      "subject": "sci"
+    },
+    {
+      "type": "SHORT_ANS",
+      "marks": 1,
+      "text": "Three students Salman, Suresh and Shivani has different mirrors as below. Three students try to get image on screen, who gets success?",
+      "data": {},
+      "id": 14,
+      "subject": "sci"
+    },
+    {
+      "type": "SHORT_ANS",
+      "marks": 1,
+      "text": "By which programme succeeded in forging an agreement to freeze CFC production at 1986 levels.",
+      "data": {},
+      "id": 15,
+      "subject": "sci"
+    },
+    {
+      "type": "SHORT_ANS",
+      "marks": 1,
+      "text": "What is \"Bio-diversity\"?",
+      "data": {},
+      "id": 16,
+      "subject": "sci"
+    },
+    {
+      "type": "SHORT_ANS",
+      "marks": 2,
+      "text": "Write the chemical reaction of zinc metal and dil. H2SO4. In this reaction H2 gas is produced but reaction between zinc metal and dil. HNO3 not produce H2 gas. Why?",
+      "data": {},
+      "id": 17,
+      "subject": "sci"
+    },
+    {
+      "type": "SHORT_ANS",
+      "marks": 2,
+      "text": "Write the four physical properties of metals.",
+      "data": {},
+      "id": 18,
+      "subject": "sci"
+    },
+    {
+      "type": "SHORT_ANS",
+      "marks": 2,
+      "text": "Give scientific reason: \"Metalic characteristics in a group are increase as we go top to down in modern periodic table\". OR What were the limitation of Döbereiner's classification.",
+      "data": {},
+      "id": 19,
+      "subject": "sci"
+    },
+    {
+      "type": "SHORT_ANS",
+      "marks": 2,
+      "text": "Give difference: Arteries - Veins. OR Write a note on excretion in plants.",
+      "data": {},
+      "id": 20,
+      "subject": "sci"
+    },
+    {
+      "type": "SHORT_ANS",
+      "marks": 2,
+      "text": "How does our body respond when adrenaline is secreted into the blood?",
+      "data": {},
+      "id": 21,
+      "subject": "sci"
+    },
+    {
+      "type": "SHORT_ANS",
+      "marks": 2,
+      "text": "An electric bulb is rated 220V and 100W. When it is operated on 110V find power.",
+      "data": {},
+      "id": 22,
+      "subject": "sci"
+    },
+    {
+      "type": "SHORT_ANS",
+      "marks": 2,
+      "text": "Give reason: It is necessary to earthing electric appliances. OR Give difference: AC current - DC current.",
+      "data": {},
+      "id": 23,
+      "subject": "sci"
+    },
+    {
+      "type": "SHORT_ANS",
+      "marks": 2,
+      "text": "Explain Tyndall effect with example.",
+      "data": {},
+      "id": 24,
+      "subject": "sci"
+    },
+    {
+      "type": "SHORT_ANS",
+      "marks": 2,
+      "text": "What is decomposer? What is the role of decomposers in the ecosystem?",
+      "data": {},
       "id": 25,
-      "type": "SHORT_ANS",
-      "marks": 2,
-      "text": "How will you test Acid and Base using Olfactory indicators? Explain it with an example.",
-      "data": {},
-      "has_image": false
+      "subject": "sci"
     },
     {
+      "type": "SHORT_ANS",
+      "marks": 2,
+      "text": "What changes can you make in your habits to become more environment friendly? OR Suggest four approaches towards the conservation of forests.",
+      "data": {},
       "id": 26,
-      "type": "SHORT_ANS",
-      "marks": 2,
-      "text": "State four properties of Ionic compounds.",
-      "data": {},
-      "has_image": false
+      "subject": "sci"
     },
     {
+      "type": "SHORT_ANS",
+      "marks": 3,
+      "text": "Describe combination reaction with examples.",
+      "data": {},
       "id": 27,
-      "type": "SHORT_ANS",
-      "marks": 2,
-      "text": "What is Gangue? On what basis Gangue is removed from the Ore?",
-      "data": {},
-      "has_image": false
+      "subject": "sci"
     },
     {
+      "type": "SHORT_ANS",
+      "marks": 3,
+      "text": "Write the preparation and uses of bleaching powder. OR Complete the following chemical reactions. i) NaCl(s) + H2O(l) + CO2(g) +NH3(g) -> ii) CaCO3(s) + H2O(l) + CO2(g) -> iii) 2NaOH(aq) + Zn(s) ->",
+      "data": {},
       "id": 28,
-      "type": "SHORT_ANS",
-      "marks": 2,
-      "text": "What were the limitations of Newland's law of Octaves?",
-      "data": {},
-      "has_image": false
+      "subject": "sci"
     },
     {
+      "type": "SHORT_ANS",
+      "marks": 3,
+      "text": "Describe electrolytic refining of copper with figure.",
+      "data": {},
       "id": 29,
-      "type": "SHORT_ANS",
-      "marks": 2,
-      "text": "What were the criteria used by Mendeleev in creating his Periodic Table?",
-      "data": {},
-      "has_image": false
+      "subject": "sci"
     },
     {
+      "type": "SHORT_ANS",
+      "marks": 3,
+      "text": "Draw the structure of neuron and explain its function.",
+      "data": {},
       "id": 30,
-      "type": "SHORT_ANS",
-      "marks": 2,
-      "text": "What is Lymph? Write its function.",
-      "data": {},
-      "has_image": false
+      "subject": "sci"
     },
     {
+      "type": "SHORT_ANS",
+      "marks": 3,
+      "text": "How is the sex of the child determined in human beings? Explain. OR What are fossils? What do they tell us about the process of evolution.",
+      "data": {},
       "id": 31,
-      "type": "SHORT_ANS",
-      "marks": 2,
-      "text": "Draw a ray-diagram for concave mirror when object is placed between Centre of Curvature (C) and Principal Focus (F). Also write Position Nature and size of the image.",
-      "data": {},
-      "has_image": true
+      "subject": "sci"
     },
     {
+      "type": "SHORT_ANS",
+      "marks": 3,
+      "text": "Describe formation of rainbow with figure. OR A student has difficulty in reading the blackboard while sitting in the last row. What could be the defect the child is suffering from? How can it be corrected? Explain with figure.",
+      "data": {},
       "id": 32,
-      "type": "SHORT_ANS",
-      "marks": 2,
-      "text": "An Ophthalmologist, Doctor Desai prescribed power + 1.5 D of corrective lens. Find the focal length of the lens and write the type of lens prescribed.",
-      "data": {},
-      "has_image": false
+      "subject": "sci"
     },
     {
+      "type": "SHORT_ANS",
+      "marks": 3,
+      "text": "An electric lamp, whose resistance is 25 Ohm and a conductor of unknown resistance (R1) are connected to a 12V battery. If 0.4 A current passing through circuit. Find unknown resistance and voltage at two ends of bulb as well as the ends of unknown resistance.",
+      "data": {},
       "id": 33,
-      "type": "MATCH_PAIRS",
-      "marks": 2,
-      "text": "Match the following :",
-      "data": {
-        "pairs": [
-          {
-            "left": "1. Plug key (Open)",
-            "right": "A) Symbol for open switch"
-          },
-          {
-            "left": "2. Plug key (Closed)",
-            "right": "B) Symbol for closed switch"
-          },
-          {
-            "left": "3. Wire crossing without joining",
-            "right": "C) Symbol for wires crossing without connection"
-          },
-          {
-            "left": "4. A wire joint",
-            "right": "D) Symbol for a wire joint"
-          }
-        ]
-      },
-      "has_image": true
+      "subject": "sci"
     },
     {
+      "type": "SHORT_ANS",
+      "marks": 3,
+      "text": "Answer the following questions : i) State the principle of solar cell. ii) Why are we looking at alternate source of energy?",
+      "data": {},
       "id": 34,
-      "type": "SHORT_ANS",
-      "marks": 2,
-      "text": "What is a Solenoid? Give the characteristics of magnetic field resulting from Solenoid.",
-      "data": {},
-      "has_image": false
+      "subject": "sci"
     },
     {
+      "type": "LONG_ANS",
+      "marks": 4,
+      "text": "Answer the following questions: i) Explain esterification reaction with example. ii) What is addition reaction? Explain with example. OR What is Covalent bond? Explain Covalent bond in methane and nitrogen molecules with figure.",
+      "data": {},
       "id": 35,
-      "type": "SHORT_ANS",
-      "marks": 2,
-      "text": "What precautions should be taken to avoid the overloading of domestic electric circuits?",
-      "data": {},
-      "has_image": false
+      "subject": "sci"
     },
     {
+      "type": "LONG_ANS",
+      "marks": 4,
+      "text": "What is excretion? Draw human excretory system and describe its structure.",
+      "data": {},
       "id": 36,
-      "type": "SHORT_ANS",
-      "marks": 2,
-      "text": "What can you as an individual do to reduce your consumption of the various natural resources?",
-      "data": {},
-      "has_image": false
+      "subject": "sci"
     },
     {
+      "type": "LONG_ANS",
+      "marks": 4,
+      "text": "Explain with figure female Reproductive system.",
+      "data": {},
       "id": 37,
+      "subject": "sci"
+    },
+    {
+      "type": "LONG_ANS",
+      "marks": 4,
+      "text": "Explain with figure refraction through a rectangular glass Slab and State laws of refraction.",
+      "data": {},
+      "id": 38,
+      "subject": "sci"
+    },
+    {
+      "type": "LONG_ANS",
+      "marks": 4,
+      "text": "What is Solenoid? Discuss the characteristics of magnetic field generated from a current-carrying solenoid coil with figure. OR Explain the underlying principle and construction of an AC electric generator by drawing a labelled diagram.",
+      "data": {},
+      "id": 39,
+      "subject": "sci"
+    },
+    {
+      "type": "MCQ",
+      "marks": 1,
+      "text": "While cooking, if the bottom of the Vessel is getting blackened on the outside, it means that.",
+      "data": {
+        "options": [
+          "A) the Food is not cooked completely",
+          "B) the Fuel is not burning completely",
+          "C) the Fuel is wet",
+          "D) the Fuel is burning completely"
+        ],
+        "answer": null
+      },
+      "id": 40,
+      "subject": "sci"
+    },
+    {
+      "type": "MCQ",
+      "marks": 1,
+      "text": "Which of the following is an olfactory indicator?",
+      "data": {
+        "options": [
+          "A) Methyl Orange",
+          "B) Phenolpthalein",
+          "C) Vanilla",
+          "D) Turmeric"
+        ],
+        "answer": null
+      },
+      "id": 41,
+      "subject": "sci"
+    },
+    {
+      "type": "MCQ",
+      "marks": 1,
+      "text": "1μΑ = A.",
+      "data": {
+        "options": [
+          "A) 10-6",
+          "B) 10-3",
+          "C) 103",
+          "D) 106"
+        ],
+        "answer": null
+      },
+      "id": 42,
+      "subject": "sci"
+    },
+    {
+      "type": "MCQ",
+      "marks": 1,
+      "text": "The lungs in human beings are a part of the system for",
+      "data": {
+        "options": [
+          "A) Nutrition",
+          "B) Transportation",
+          "C) Excretion",
+          "D) Respiration"
+        ],
+        "answer": null
+      },
+      "id": 43,
+      "subject": "sci"
+    },
+    {
+      "type": "MCQ",
+      "marks": 1,
+      "text": "The crystalline lens of people at old age becomes milky and cloudy. This condition is called",
+      "data": {
+        "options": [
+          "A) Cataract",
+          "B) Myopia",
+          "C) Hypermetropia",
+          "D) Presbyopia"
+        ],
+        "answer": null
+      },
+      "id": 44,
+      "subject": "sci"
+    },
+    {
+      "type": "MCQ",
+      "marks": 1,
+      "text": "No matter how Far you stand From a mirror, your image appears erect. The mirror is likely to be",
+      "data": {
+        "options": [
+          "A) Only plane",
+          "B) Only concave",
+          "C) Only convex",
+          "D) Either plane or convex"
+        ],
+        "answer": null
+      },
+      "id": 45,
+      "subject": "sci"
+    },
+    {
+      "type": "FILL_BLANK",
+      "marks": 1,
+      "text": "The earth's crust has only ______ % carbon in the Form of minerals.",
+      "data": {},
+      "id": 46,
+      "subject": "sci"
+    },
+    {
+      "type": "FILL_BLANK",
+      "marks": 1,
+      "text": "The SI unit of electric potential difference is named after the Scientist ______",
+      "data": {},
+      "id": 47,
+      "subject": "sci"
+    },
+    {
+      "type": "FILL_BLANK",
+      "marks": 1,
+      "text": "In anaerobic respiration by our muscle cells, the pyruvate is converted into ______",
+      "data": {},
+      "id": 48,
+      "subject": "sci"
+    },
+    {
+      "type": "FILL_BLANK",
+      "marks": 1,
+      "text": "______ animal can change sex.",
+      "data": {},
+      "id": 49,
+      "subject": "sci"
+    },
+    {
+      "type": "FILL_BLANK",
+      "marks": 1,
+      "text": "The lens formula is $\\frac{1}{v} - \\frac{1}{u} = \\frac{1}{f}$",
+      "data": {},
+      "id": 50,
+      "subject": "sci"
+    },
+    {
+      "type": "FILL_BLANK",
+      "marks": 1,
+      "text": "______ is the Chemical Formula of Cinnabar.",
+      "data": {},
+      "id": 51,
+      "subject": "sci"
+    },
+    {
+      "type": "TRUE_FALSE",
+      "marks": 1,
+      "text": "Solder is an alloy of lead and tin.",
+      "data": {},
+      "id": 52,
+      "subject": "sci"
+    },
+    {
+      "type": "TRUE_FALSE",
+      "marks": 1,
+      "text": "A child who inherits a 'Y' chromosome from the Father will be a girl.",
+      "data": {},
+      "id": 53,
+      "subject": "sci"
+    },
+    {
+      "type": "TRUE_FALSE",
+      "marks": 1,
+      "text": "The twinkling of a star is due to atmospheric refraction of starlight.",
+      "data": {},
+      "id": 54,
+      "subject": "sci"
+    },
+    {
+      "type": "TRUE_FALSE",
+      "marks": 1,
+      "text": "The concentration of hydronium ions (H3O+) increased when a solution of an acid is diluted.",
+      "data": {},
+      "id": 55,
+      "subject": "sci"
+    },
+    {
+      "type": "SHORT_ANS",
+      "marks": 1,
+      "text": "Iodine is necessary For the Synthesis of which hormone in human body?",
+      "data": {},
+      "id": 56,
+      "subject": "sci"
+    },
+    {
+      "type": "SHORT_ANS",
+      "marks": 1,
+      "text": "If a \"trait A\" exists in 10% of a population of an asexually, reproducing species and a \"trait B\" exists in 60% of the same population, which trait is likely to have arisen earlier?",
+      "data": {},
+      "id": 57,
+      "subject": "sci"
+    },
+    {
+      "type": "SHORT_ANS",
+      "marks": 1,
+      "text": "In the dispersion of white light through a prism, Which coloured light bends the least?",
+      "data": {},
+      "id": 58,
+      "subject": "sci"
+    },
+    {
+      "type": "SHORT_ANS",
+      "marks": 1,
+      "text": "Define: Electric current.",
+      "data": {},
+      "id": 59,
+      "subject": "sci"
+    },
+    {
+      "type": "MCQ",
+      "marks": 1,
+      "text": "Cytokinin",
+      "data": {
+        "options": [
+          "a) Help in the growth of stem",
+          "b) Wilting of leaves",
+          "c) Promote cell division"
+        ],
+        "answer": null
+      },
+      "id": 60,
+      "subject": "sci"
+    },
+    {
+      "type": "MCQ",
+      "marks": 1,
+      "text": "Gibberellins",
+      "data": {
+        "options": [
+          "a) Help in the growth of stem",
+          "b) Wilting of leaves",
+          "c) Promote cell division"
+        ],
+        "answer": null
+      },
+      "id": 61,
+      "subject": "sci"
+    },
+    {
+      "type": "MCQ",
+      "marks": 1,
+      "text": "The organisms which prepared their own Food",
+      "data": {
+        "options": [
+          "a) Herbivores",
+          "b) Producers",
+          "c) Carnivores"
+        ],
+        "answer": null
+      },
+      "id": 62,
+      "subject": "sci"
+    },
+    {
+      "type": "MCQ",
+      "marks": 1,
+      "text": "The organisms which feed on plants",
+      "data": {
+        "options": [
+          "a) Herbivores",
+          "b) Producers",
+          "c) Carnivores"
+        ],
+        "answer": null
+      },
+      "id": 63,
+      "subject": "sci"
+    },
+    {
       "type": "SHORT_ANS",
       "marks": 2,
-      "text": "State the advantages of water stored in the ground.",
+      "text": "A shiny brown coloured element ‘X' on heating in air becomes black in colour. Name the element 'X' and the black coloured compound Formed.",
       "data": {},
-      "has_image": false
+      "id": 64,
+      "subject": "sci"
     },
     {
-      "id": 38,
-      "type": "LONG_ANS",
+      "type": "SHORT_ANS",
+      "marks": 2,
+      "text": "Give reason : Platinum, Gold and Silver are used to make jewellery.",
+      "data": {},
+      "id": 65,
+      "subject": "sci"
+    },
+    {
+      "type": "SHORT_ANS",
+      "marks": 2,
+      "text": "Draw neat and labelled diagram showing nutrition in Amoeba.",
+      "data": {},
+      "id": 66,
+      "subject": "sci"
+    },
+    {
+      "type": "SHORT_ANS",
+      "marks": 2,
+      "text": "What is called an unisexual Flower? Write its examples.",
+      "data": {},
+      "id": 67,
+      "subject": "sci"
+    },
+    {
+      "type": "SHORT_ANS",
+      "marks": 2,
+      "text": "Why does the Sky appear dark instead of blue to an astronaut?",
+      "data": {},
+      "id": 68,
+      "subject": "sci"
+    },
+    {
+      "type": "SHORT_ANS",
+      "marks": 2,
+      "text": "A current of 0.5 A is drawn by a Filament of an electric bulb for 20 minutes. Find the amount of electric charge that Flows through the circuit",
+      "data": {},
+      "id": 69,
+      "subject": "sci"
+    },
+    {
+      "type": "SHORT_ANS",
+      "marks": 2,
+      "text": "Material Resistivity (Ωm) Silver 1.60 × 10-8 Copper 1.62 × 10-8 Iron 10.0 × 10-8 Mercury 94.0 × 10-8 Manganese 1.84 × 10-6 Use the data from the above table to answer the Following questions. a) Which among iron and mercury is a better conductor? b) Which material is the best conductor?",
+      "data": {},
+      "id": 70,
+      "subject": "sci"
+    },
+    {
+      "type": "SHORT_ANS",
+      "marks": 2,
+      "text": "Explain Solenoid.",
+      "data": {},
+      "id": 71,
+      "subject": "sci"
+    },
+    {
+      "type": "SHORT_ANS",
+      "marks": 2,
+      "text": "How can you help in reducing the problem of waste disposal? Give any two methods.",
+      "data": {},
+      "id": 72,
+      "subject": "sci"
+    },
+    {
+      "type": "SHORT_ANS",
+      "marks": 2,
+      "text": "Classify the following ecosystems into natural ecosystem and artificial ecosystems. Forest, garden, aquarium, Sea",
+      "data": {},
+      "id": 73,
+      "subject": "sci"
+    },
+    {
+      "type": "SHORT_ANS",
+      "marks": 2,
+      "text": "State the organs of human respiratory system.",
+      "data": {},
+      "id": 74,
+      "subject": "sci"
+    },
+    {
+      "type": "SHORT_ANS",
+      "marks": 2,
+      "text": "Explain Fleming's left-hand rule.",
+      "data": {},
+      "id": 75,
+      "subject": "sci"
+    },
+    {
+      "type": "SHORT_ANS",
       "marks": 3,
-      "text": "Write one equation each for decomposition reactions where energy is supplied in the form of heat, light or electricity.",
+      "text": "What is combination reaction? Explain with two examples.",
       "data": {},
-      "has_image": false
+      "id": 76,
+      "subject": "sci"
     },
     {
-      "id": 39,
-      "type": "LONG_ANS",
+      "type": "SHORT_ANS",
       "marks": 3,
-      "text": "Write the chemical formula, preparation and uses of Bleaching powder.",
+      "text": "The electronic configuration of two elements X and Y are as follows: X = 2, 8, 1 Y = 2, 8, 7 a) Identify the metal and write its name b) Identify the nonmetal and Write its name. c) Which ionic compound is Formed by X and Y?",
       "data": {},
-      "has_image": false
+      "id": 77,
+      "subject": "sci"
     },
     {
-      "id": 40,
-      "type": "LONG_ANS",
+      "type": "SHORT_ANS",
       "marks": 3,
-      "text": "Take three test tubes and place clean iron nails in each of them.\nLabel these test tubes A, B and C\nPour some water in test tube 'A' and cork it.\nPour boiled distilled water in test tube 'B' add about 1 ml of oil and cork it.\nPut some anhydrous Calcium chloride in test tube 'C' and cork it.\nLeave these test tubes for few days, write your observation for all three test tubes and regarding your observation give reason.",
+      "text": "Draw neat and labelled diagram of neuron. Write the Function of dendrite.",
       "data": {},
-      "has_image": false
+      "id": 78,
+      "subject": "sci"
     },
     {
-      "id": 41,
-      "type": "LONG_ANS",
+      "type": "SHORT_ANS",
       "marks": 3,
-      "text": "Write three differences between Autotrophic Nutrition and Heterotrophic Nutrition.",
+      "text": "What are the changes seen in girls at the time of puberty?",
       "data": {},
-      "has_image": false
+      "id": 79,
+      "subject": "sci"
     },
     {
-      "id": 42,
-      "type": "LONG_ANS",
+      "type": "SHORT_ANS",
       "marks": 3,
-      "text": "Draw neat and labeled diagram of Human brain.",
+      "text": "Differentiate between Male reproductive System and Female reproductive system.",
       "data": {},
-      "has_image": true
+      "id": 80,
+      "subject": "sci"
     },
     {
-      "id": 43,
-      "type": "LONG_ANS",
+      "type": "SHORT_ANS",
       "marks": 3,
-      "text": "What is puberty? What sexual changes are seen during puberty?",
+      "text": "Name the type of mirror used in the following situations - a) Headlights of a car b) Side/rear-view mirror of a vehicle c) Solar Furnace",
       "data": {},
-      "has_image": false
+      "id": 81,
+      "subject": "sci"
     },
     {
-      "id": 44,
-      "type": "LONG_ANS",
+      "type": "SHORT_ANS",
       "marks": 3,
-      "text": "What are fossils? What do they tell us about the process of evolution?",
+      "text": "Draw a ray diagram showing the image formation by a convex lens when an object is placed between F1 and 2F1 of the lens. Write the position, nature and size of image.",
       "data": {},
-      "has_image": false
+      "id": 82,
+      "subject": "sci"
     },
     {
-      "id": 45,
-      "type": "LONG_ANS",
+      "type": "SHORT_ANS",
       "marks": 3,
-      "text": "Explain series connection of Resistors and derive the formula of equivalent resistance.",
+      "text": "The potential difference between the terminals of an electric heater is 60 V When it draws a current of 4 A from the Source. What current will the heater draw if the potential difference is increased to 120 V?",
       "data": {},
-      "has_image": false
+      "id": 83,
+      "subject": "sci"
     },
     {
-      "id": 46,
-      "type": "LONG_ANS",
-      "marks": 3,
-      "text": "How is ozone formed? Write importance of ozone layer.",
-      "data": {},
-      "has_image": false
-    },
-    {
-      "id": 47,
-      "type": "LONG_ANS",
+      "type": "SHORT_ANS",
       "marks": 4,
-      "text": "Describe an experiment to show Reaction between Zinc granules and dilute H2SO4.",
+      "text": "Five solutions A, B, C, D and E when tested with universal indicator showed pH as 4, 1, 11, 7 and 9 respectively Which solution is a) neutral b) Strongly alkaline? c) Strongly acidic? • Arrange the pH in increasing order of hydrogen-ion concentration.",
       "data": {},
-      "has_image": false
+      "id": 84,
+      "subject": "sci"
     },
     {
-      "id": 48,
-      "type": "LONG_ANS",
+      "type": "SHORT_ANS",
       "marks": 4,
-      "text": "Give chemical formula and draw the electron-dot structure of the following compounds.\ni) Ethane\nii) Ethanoic acid",
+      "text": "How is plaster of Paris formed? Write an equation to show the reaction between plaster of Paris and Water? Write uses of plaster of Paris.",
       "data": {},
-      "has_image": true
+      "id": 85,
+      "subject": "sci"
     },
     {
-      "id": 49,
-      "type": "LONG_ANS",
+      "type": "SHORT_ANS",
       "marks": 4,
-      "text": "Explain in detail the Blood circulation in human heart (Diagram not required).",
+      "text": "a) Differentiate between soap and detergent. b) Write the names and formula of Functional groups for the following compounds - Propanol, Propanone",
       "data": {},
-      "has_image": false
+      "id": 86,
+      "subject": "sci"
     },
     {
-      "id": 50,
-      "type": "LONG_ANS",
+      "type": "SHORT_ANS",
       "marks": 4,
-      "text": "What is asexual reproduction? Explain Budding and Spore formation with diagram.",
+      "text": "a) Write a Short note on Lymph. b) What are the components of the transport system in highly organised plants? Write their functions also.",
       "data": {},
-      "has_image": true
+      "id": 87,
+      "subject": "sci"
     },
     {
-      "id": 51,
-      "type": "LONG_ANS",
+      "type": "SHORT_ANS",
       "marks": 4,
-      "text": "Define the following terms related to spherical lens.\ni) Centre of curvature\nii) Principal focus\niii) Optical centre\niv) Focal length",
+      "text": "a) What are the differences between autotrophic nutrition and heterotrophic nutrition? b) Draw neat and labelled structure of a nephron.",
       "data": {},
-      "has_image": false
+      "id": 88,
+      "subject": "sci"
     },
     {
-      "id": 52,
-      "type": "LONG_ANS",
+      "type": "SHORT_ANS",
       "marks": 4,
-      "text": "Yashvi, student of standard 10th is sitting at the back of the classroom and is not able to read writings on the blackboard clearly, then what defect of vision she has? Explain. How can it be corrected [Diagram necessary].",
+      "text": "Explain near sightedness (Myopia) and its correction with the help of diagram.",
       "data": {},
-      "has_image": true
+      "id": 89,
+      "subject": "sci"
     },
     {
-      "id": 53,
-      "type": "LONG_ANS",
+      "type": "SHORT_ANS",
       "marks": 4,
-      "text": "State principle and explain working of Electric generator with diagram.",
+      "text": "a) List the properties of magnetic field lines. b) When does an electric short circuit occurs?",
       "data": {},
-      "has_image": true
+      "id": 90,
+      "subject": "sci"
     },
     {
-      "id": 54,
-      "type": "LONG_ANS",
+      "type": "SHORT_ANS",
       "marks": 4,
-      "text": "State advantages and major hazards of Nuclear Energy.",
+      "text": "a) Write the Full forms For: CFC, UNEP. b) What is the role of decomposers in the ecosystem?",
       "data": {},
-      "has_image": false
+      "id": 91,
+      "subject": "sci"
+    },
+    {
+      "type": "MCQ",
+      "marks": 1,
+      "text": "Select the correct alternative from the given : \"Adding Acid & Base solutions in a test tube results to....",
+      "has_image": false,
+      "data": {
+        "options": [
+          "A) only (i) correct",
+          "B) (i) & (ii) both correct",
+          "C) (i) & (iii) correct",
+          "D) (i) & (iv) correct"
+        ],
+        "answer": null
+      },
+      "id": 92,
+      "subject": "sci"
+    },
+    {
+      "type": "MCQ",
+      "marks": 1,
+      "text": "A Doctor advised a patient for an insulin injection as ...",
+      "has_image": false,
+      "data": {
+        "options": [
+          "A) His blood pressure was low.",
+          "B) His heart beats were low.",
+          "C) He was detected with goitre.",
+          "D) He was detected with high sugar level in blood."
+        ],
+        "answer": null
+      },
+      "id": 93,
+      "subject": "sci"
+    },
+    {
+      "type": "SHORT_ANS",
+      "marks": 1,
+      "text": "Draw a figure showing the path of ray of light at an angle entering from air to Water.",
+      "has_image": false,
+      "data": {},
+      "id": 94,
+      "subject": "sci"
+    },
+    {
+      "type": "SHORT_ANS",
+      "marks": 1,
+      "text": "What will be the effect caused if all the greenery on earth gets extinct?",
+      "has_image": false,
+      "data": {},
+      "id": 95,
+      "subject": "sci"
+    },
+    {
+      "type": "SHORT_ANS",
+      "marks": 2,
+      "text": "Differentiate between convex lens & concave lens.",
+      "has_image": false,
+      "data": {},
+      "id": 96,
+      "subject": "sci"
+    },
+    {
+      "type": "SHORT_ANS",
+      "marks": 1,
+      "text": "(A) Give scientific reasons : Curd and citrus food should not be stored in Copper or Brass Vassels.",
+      "has_image": false,
+      "data": {},
+      "id": 97,
+      "subject": "sci"
+    },
+    {
+      "type": "SHORT_ANS",
+      "marks": 1,
+      "text": "(B) What is neutralisation ? explain giving examples.",
+      "has_image": false,
+      "data": {},
+      "id": 98,
+      "subject": "sci"
+    },
+    {
+      "type": "SHORT_ANS",
+      "marks": 2,
+      "text": "What do you understand by corrosion? Write any two methods to reduce corrosion of iron ?",
+      "has_image": false,
+      "data": {},
+      "id": 99,
+      "subject": "sci"
+    },
+    {
+      "type": "SHORT_ANS",
+      "marks": 2,
+      "text": "Write Ohms law and also state its S.I. units.",
+      "has_image": false,
+      "data": {},
+      "id": 100,
+      "subject": "sci"
+    },
+    {
+      "type": "LONG_ANS",
+      "marks": 3,
+      "text": "Describe electrolytic refining of Copper ?",
+      "has_image": false,
+      "data": {},
+      "id": 101,
+      "subject": "sci"
+    },
+    {
+      "type": "LONG_ANS",
+      "marks": 3,
+      "text": "Derive laws of resistance in series so as to explain equivalent resistance of circuit ?",
+      "has_image": false,
+      "data": {},
+      "id": 102,
+      "subject": "sci"
+    },
+    {
+      "type": "LONG_ANS",
+      "marks": 3,
+      "text": "State various methods by which energy is obtained from sea ; and explain in detail any one of them.",
+      "has_image": false,
+      "data": {},
+      "id": 103,
+      "subject": "sci"
+    },
+    {
+      "type": "SHORT_ANS",
+      "marks": 2,
+      "text": "(A) Draw a neat and labelled diagram of a human alimentary canal.",
+      "has_image": false,
+      "data": {},
+      "id": 104,
+      "subject": "sci"
+    },
+    {
+      "type": "SHORT_ANS",
+      "marks": 2,
+      "text": "(B) Label the following glands shown in the figure :",
+      "has_image": false,
+      "data": {},
+      "id": 105,
+      "subject": "sci"
     }
   ]
 }

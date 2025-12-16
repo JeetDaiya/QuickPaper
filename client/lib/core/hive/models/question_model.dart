@@ -1,3 +1,4 @@
+import 'package:client/core/utils/question_type_map.dart';
 import 'package:hive_flutter/adapters.dart';
 part 'question_model.g.dart';
 
@@ -55,7 +56,7 @@ class Question{
     return Question(
       id: map['id'].toString(),
       text: map['text'] as String,
-      questionType: map['type'] as String,
+      questionType: questionTypeMap[map['type']] != null ? questionTypeMap[map['type']] as String : 'unknown',
       additionalData: map['data'] != null ? Map<String, dynamic>.from(map['data']) : null,
       hasImage: map['has_image'] != null ? map['has_image'] as bool : false,
       imageUrl: map['imageUrl'] != null ? map['imageUrl'] as String : null,

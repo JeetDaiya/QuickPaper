@@ -8,16 +8,16 @@ export async function generateQuestions(req, res) {
     console.log('Received Request');
     
     try{
-        // const fileName = `${topic}_${chapter}.pdf`;
-        // const pdfData = await fetchPdf(fileName);
-        // const prompt = generatePrompt(topic, chapter);
-        // const response = await generateQuestionsService(prompt, pdfData);
-        const jsonFile = fs.readFileSync('tempData.json', 'utf-8');
-        const jsonData = JSON.parse(jsonFile);
+        const fileName = `${topic}_${chapter}.pdf`;
+        const pdfData = await fetchPdf(fileName);
+        const prompt = generatePrompt(topic, chapter);
+        const response = await generateQuestionsService(prompt, pdfData);
+        // const jsonFile = fs.readFileSync('tempData.json', 'utf-8');
+        // const jsonData = JSON.parse(jsonFile);
         console.log('Questions Generated Successfully');
         res.status(200).json({
             success: true,
-            data: jsonData
+            data: response
         });
     } catch (error) {
         console.log(error);

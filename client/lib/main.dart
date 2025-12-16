@@ -1,3 +1,4 @@
+import 'package:client/features/home/views/pages/home_page.dart';
 import 'package:client/features/questions/view/ai_question_dialog.dart';
 import 'package:client/features/questions/view/question_screen.dart';
 import 'package:flutter/material.dart';
@@ -36,7 +37,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: AiQuestionDialog(),
+      home: HomePage(),
     );
   }
 }

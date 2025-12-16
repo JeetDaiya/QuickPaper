@@ -2,6 +2,7 @@ import 'dart:ui';
 import 'package:client/features/questions/providers/selected_questions_provider.dart';
 import 'package:client/features/questions/services/pdf/sectioned_pdf_service.dart';
 import 'package:client/features/questions/view/pdf_preview_screen.dart';
+import 'package:client/features/questions/view/question_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:pdf/pdf.dart';
@@ -68,7 +69,11 @@ class SelectedQuestionsPreviewScreen extends ConsumerWidget {
                   ),
                   const SizedBox(height: 10),
                   TextButton(
-                    onPressed: () => {Navigator.of(context).pop()},
+                    onPressed: () => {
+                      Navigator.of(context).pushReplacement(
+                        MaterialPageRoute(builder: (context) => QuestionScreen())
+                      )
+                    },
                     style: ButtonStyle(
                       backgroundColor: WidgetStateProperty.all(Pallete.primaryColor),
                       padding: WidgetStateProperty.all(EdgeInsets.symmetric(horizontal: 20, vertical: 10)),
@@ -114,96 +119,96 @@ class SelectedQuestionsPreviewScreen extends ConsumerWidget {
                               return Card(
                                 key: ValueKey(question.id),
                                 margin: const EdgeInsets.symmetric(vertical: 8),
-                                child: ReorderableDragStartListener(
-                                  index: index,
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(12),
-                                    child: Row(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Icon(
+                                child: Padding(
+                                  padding: const EdgeInsets.all(12),
+                                  child: Row(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      ReorderableDragStartListener(
+                                        index: index,
+                                        child: Icon(
                                           Icons.drag_indicator_outlined,
                                           color: Colors.grey,
                                         ),
-                                        const SizedBox(width: 10),
-                                        Expanded(
-                                          child: Column(
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                            children: [
-                                              Text(
-                                                "Question ${index + 1}",
-                                                style: TextStyle(
-                                                  fontWeight: FontWeight.w400,
-                                                  fontSize: 12,
-                                                  color: Colors.grey[600],
-                                                ),
+                                      ),
+                                      const SizedBox(width: 10),
+                                      Expanded(
+                                        child: Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            Text(
+                                              "Question ${index + 1}",
+                                              style: TextStyle(
+                                                fontWeight: FontWeight.w400,
+                                                fontSize: 12,
+                                                color: Colors.grey[600],
                                               ),
-                                              const SizedBox(height: 5),
-                                              Text(
-                                                question.text.trim(),
-                                                softWrap: true,
-                                                style: const TextStyle(
-                                                  fontWeight: FontWeight.w500,
-                                                ),
+                                            ),
+                                            const SizedBox(height: 5),
+                                            Text(
+                                              question.text.trim(),
+                                              softWrap: true,
+                                              style: const TextStyle(
+                                                fontWeight: FontWeight.w500,
                                               ),
-                                              const SizedBox(height: 12),
-                                              Row(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment
-                                                        .spaceBetween,
-                                                children: [
-                                                  Wrap(
-                                                    spacing: 6,
-                                                    children: [
-                                                      QuestionTag(
-                                                        question: question,
-                                                        backgroundColor:
-                                                            const Color(
-                                                              0xFFE0F2F1,
-                                                            ),
-                                                        textColor: const Color(
-                                                          0xFF00695C,
-                                                        ),
-                                                        info:
-                                                            "${question.marks} Marks",
+                                            ),
+                                            const SizedBox(height: 12),
+                                            Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment
+                                                      .spaceBetween,
+                                              children: [
+                                                Wrap(
+                                                  spacing: 6,
+                                                  children: [
+                                                    QuestionTag(
+                                                      question: question,
+                                                      backgroundColor:
+                                                          const Color(
+                                                            0xFFE0F2F1,
+                                                          ),
+                                                      textColor: const Color(
+                                                        0xFF00695C,
                                                       ),
-                                                      QuestionTag(
-                                                        question: question,
-                                                        backgroundColor:
-                                                            const Color(
-                                                              0xFFECEFF1,
-                                                            ),
-                                                        textColor: const Color(
-                                                          0xFF475569,
-                                                        ),
-                                                        info: question
-                                                            .questionType,
-                                                      ),
-                                                    ],
-                                                  ),
-                                                  IconButton(
-                                                    icon: const Icon(
-                                                      Icons.delete_outline,
+                                                      info:
+                                                          "${question.marks} Marks",
                                                     ),
-                                                    color: Colors.redAccent,
-                                                    onPressed: () {
-                                                      ref
-                                                          .read(
-                                                            selectedQuestionsProvider
-                                                                .notifier,
-                                                          )
-                                                          .toggle(question);
-                                                    },
+                                                    QuestionTag(
+                                                      question: question,
+                                                      backgroundColor:
+                                                          const Color(
+                                                            0xFFECEFF1,
+                                                          ),
+                                                      textColor: const Color(
+                                                        0xFF475569,
+                                                      ),
+                                                      info: question
+                                                          .questionType,
+                                                    ),
+                                                  ],
+                                                ),
+                                                IconButton(
+                                                  icon: const Icon(
+                                                    Icons.delete_outline,
                                                   ),
-                                                ],
-                                              ),
-                                            ],
-                                          ),
+                                                  color: Colors.redAccent,
+                                                  onPressed: () {
+                                                    ref
+                                                        .read(
+                                                          selectedQuestionsProvider
+                                                              .notifier,
+                                                        )
+                                                        .toggle(question);
+                                                  },
+                                                ),
+                                              ],
+                                            ),
+                                          ],
                                         ),
-                                      ],
-                                    ),
+                                      ),
+                                    ],
                                   ),
                                 ),
                               );

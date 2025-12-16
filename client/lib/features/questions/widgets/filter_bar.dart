@@ -12,37 +12,45 @@ class FilterBar extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Text('$label: '),
-          const SizedBox(width: 10),
-          Expanded(
-            child: Wrap(
-              children: options.map((value){
-                final isSelected = selected == value;
-                return ChoiceChip(
-                  label: Text(
-                    value,
-                    style: TextStyle(
-                      color: isSelected ? Colors.white : Pallete.primaryColor,
-                    ),
-                  )
-                  , selected: isSelected,
-                  selectedColor: Pallete.primaryColor,
-                  backgroundColor: Colors.white,
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadiusGeometry.circular(100)),
-                  showCheckmark: false,
-                  onSelected: (_){
-                    onSelected(value);
-                  },
-                );
-              }).toList(),
+    return SizedBox(
+      height: 60,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text('$label: '),
+            const SizedBox(width: 10),
+            Expanded(
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Wrap(
+                  runSpacing: 2.0,
+                  spacing: 5,
+                  children: options.map((value){
+                    final isSelected = selected == value;
+                    return ChoiceChip(
+                      label: Text(
+                        value,
+                        style: TextStyle(
+                          color: isSelected ? Colors.white : Pallete.primaryColor,
+                        ),
+                      )
+                      , selected: isSelected,
+                      selectedColor: Pallete.primaryColor,
+                      backgroundColor: Colors.white,
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadiusGeometry.circular(100)),
+                      showCheckmark: false,
+                      onSelected: (_){
+                        onSelected(value);
+                      },
+                    );
+                  }).toList(),
+              )
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

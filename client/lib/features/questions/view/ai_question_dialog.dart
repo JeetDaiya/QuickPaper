@@ -46,7 +46,7 @@ class _AiQuestionDialogState extends ConsumerState<AiQuestionDialog> {
         constraints: BoxConstraints(
           maxHeight: hasQuestions
               ? MediaQuery.of(context).size.height * 0.8
-              : MediaQuery.of(context).size.height * 0.3,
+              : MediaQuery.of(context).size.height * 0.33 ,
         ),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
@@ -106,36 +106,69 @@ class _AiQuestionDialogState extends ConsumerState<AiQuestionDialog> {
               ),
             ),
             const SizedBox(height: 10),
-            const Text('Select Chapter', textAlign: TextAlign.left,),
-            const SizedBox(height: 10),
-            SizedBox(
-              width: 400,
-              child: DropdownButtonFormField<String>(
-                menuMaxHeight: 300,
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  contentPadding: const EdgeInsets.symmetric(
-                    horizontal: 16,
-                    vertical: 12,
-                  ),
-                ),
-                initialValue: chapters[0],
-                items: chapters.map((chapter) {
-                  return DropdownMenuItem(
-                      value: chapter, child: Text(chapter)
-                  );
-                }).toList(),
-                onChanged: (value) {
-                  setState(() {
-                    _selectedChapter = value!;
-                  });
-                },
-              ),
+            SingleChildScrollView(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text('Select Chapter', textAlign: TextAlign.left,),
+                    const SizedBox(height: 10),
+                    SizedBox(
+                      width: double.infinity, // <--- Sets the width of the button AND the menu
+                      child: DropdownButtonFormField<String>(
+                        // 2. Essential for proper width behavior
+                        isExpanded: true,
+
+                        // 3. Styling the Popup Menu itself
+                        menuMaxHeight: 300,
+                        dropdownColor: Colors.white, // Background color of the popup list
+                        borderRadius: BorderRadius.circular(20), // Rounded corners for the popup list
+                        elevation: 4, // Shadow for the popup list
+
+                        // 4. Styling the Text inside
+                        style: const TextStyle(
+                            color: Colors.deepPurple,
+                            fontSize: 16,
+                            fontWeight: FontWeight.w500
+                        ),
+
+                        // 5. Customizing the Icon (Arrow)
+                        icon: const Icon(Icons.keyboard_arrow_down_rounded, color: Colors.purple),
+                        iconSize: 30,
+
+                        decoration: InputDecoration(
+                          // Background color of the BUTTON (not the menu)
+                          filled: true,
+                          fillColor: Colors.purple.shade50,
+
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(15), // Rounded corners for the button
+                            borderSide: BorderSide.none, // specific border style
+                          ),
+                          contentPadding: const EdgeInsets.symmetric(
+                            horizontal: 20,
+                            vertical: 16,
+                          ),
+                        ),
+
+                        value: _selectedChapter, // Use 'value' instead of 'initialValue' when using state
+                        items: chapters.map((chapter) {
+                          return DropdownMenuItem(
+                              value: chapter,
+                              child: Text("Chapter $chapter") // Added "Chapter" for better look
+                          );
+                        }).toList(),
+                        onChanged: (value) {
+                          setState(() {
+                            _selectedChapter = value!;
+                          });
+                        },
+                      ),
+                    ),
+                    const SizedBox(height: 10),
+                    _buildActionButton(aiState),
+                  ],
+                )
             ),
-            const SizedBox(height: 10),
-            _buildActionButton(aiState),
             const SizedBox(height: 10),
             if (hasQuestions)
               Expanded(

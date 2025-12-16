@@ -89,7 +89,7 @@ class NormalPdfService {
                                     _buildOptionsGrid(data['options']),
 
                                 // -- CASE B: Table Data --
-                                if (q.questionType == 'TABLE_DATA')
+                                if (q.questionType == 'Table data')
                                     _buildTable(data),
 
                                 pw.SizedBox(height: 5),

@@ -12,48 +12,46 @@ class StatInfoCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 80,
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(top: 5),
-            child: Container(
-              decoration: BoxDecoration(
-                color: backgroundColor,
-                borderRadius: BorderRadius.circular(5.0),
-              ),
-              height: 40,
-              width: 40,
-              child: Icon(
-                icon,
-                color: iconColor,
-                size: 30,
-              ),
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Padding(
+          padding: const EdgeInsets.only(top: 5),
+          child: Container(
+            decoration: BoxDecoration(
+              color: backgroundColor,
+              borderRadius: BorderRadius.circular(5.0),
+            ),
+            height: 40,
+            width: 40,
+            child: Icon(
+              icon,
+              color: iconColor,
+              size: 30,
             ),
           ),
-          SizedBox(width: 10),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                text1,
-                style: TextStyle(fontSize: 20),
+        ),
+        SizedBox(width: 10),
+        Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              text1,
+              style: TextStyle(fontSize: 18),
+            ),
+            Text(
+              text2,
+              textAlign: TextAlign.left,
+              style: TextStyle(
+                  color: Colors.black54,
+                  fontSize: 10
               ),
-              Text(
-                text2,
-                textAlign: TextAlign.left,
-                style: TextStyle(
-                    color: Colors.black54,
-                    fontSize: 14
-                ),
-              ),
-            ],
-          ),
-        ],
-      ),
+            ),
+          ],
+        ),
+      ],
     );
   }
 }
