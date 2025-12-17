@@ -3,7 +3,7 @@ import '../domain/subject.dart';
 
 part 'selected_subject_provider.g.dart';
 
-@riverpod
+@Riverpod(keepAlive: true)
 class SelectedSubject extends _$SelectedSubject {
 @override
 Subject? build() => null;

@@ -43,6 +43,7 @@ dependencies:
   markdown: ^7.3.0
   printing: ^5.14.2
   pdf: ^3.11.3
+  supabase_flutter: ^2.12.0
 
 dev_dependencies:
   flutter_test:
@@ -73,8 +74,10 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/mockData.json
     - assets/images/ai_generated.png
+    - assets/images/ss_logo.png
+    - assets/images/sci_logo.png
+    - assets/images/eng_logo.png
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 

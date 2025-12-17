@@ -27,7 +27,8 @@ class QuestionAdapter extends TypeAdapter<Question> {
       standard: fields[8] as String?,
       marks: fields[9] as int,
       answer: fields[10] as String?,
-    )..subject = fields[4] as String?;
+      subject: fields[4] as String?,
+    );
   }
 
   @override

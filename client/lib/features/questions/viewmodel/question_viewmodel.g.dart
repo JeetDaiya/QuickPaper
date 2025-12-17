@@ -6,12 +6,12 @@ part of 'question_viewmodel.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$questionViewmodelHash() => r'5158d59a2a5c17eda5d7a9babc1ad2d5f587bc35';
+String _$questionViewmodelHash() => r'4e50295147e32b5ba2b23a95191e6352616fa2c9';
 
 /// See also [QuestionViewmodel].
 @ProviderFor(QuestionViewmodel)
-final questionViewmodelProvider = AutoDisposeAsyncNotifierProvider<
-    QuestionViewmodel, List<Question>>.internal(
+final questionViewmodelProvider =
+    AsyncNotifierProvider<QuestionViewmodel, List<Question>>.internal(
   QuestionViewmodel.new,
   name: r'questionViewmodelProvider',
   debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
@@ -21,6 +21,6 @@ final questionViewmodelProvider = AutoDisposeAsyncNotifierProvider<
   allTransitiveDependencies: null,
 );
 
-typedef _$QuestionViewmodel = AutoDisposeAsyncNotifier<List<Question>>;
+typedef _$QuestionViewmodel = AsyncNotifier<List<Question>>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member

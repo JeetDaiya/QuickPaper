@@ -4,7 +4,7 @@
 
 part 'question_viewmodel.g.dart';
 
-@riverpod
+@Riverpod(keepAlive: true)
 class QuestionViewmodel extends _$QuestionViewmodel {
 
   @override

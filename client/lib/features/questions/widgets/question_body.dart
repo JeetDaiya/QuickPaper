@@ -12,20 +12,23 @@ class QuestionBody extends StatelessWidget {
       case 'MCQ':
         return McqOptions(options: question.additionalData?['options']);
 
-      case 'MATCH_PAIRS':
+      case 'Match the Pairs':
         return MatchPairs(pairs: question.additionalData?['pairs']);
 
-      case 'TABLE_DATA':
+      case 'Table data':
         return QuestionTable(
           headers: question.additionalData?['headers'],
           rows: question.additionalData?['rows'],
         );
 
-      case 'FILL_BLANK':
-      case 'TRUE_FALSE':
-      case 'SHORT_ANS':
-      case 'LONG_ANS':
-      case 'ERROR_CORRECTION':
+      case 'Comprehension':
+        return ComprehensionQuestion(questions: question.additionalData?['questions']);
+
+      case 'Fill in the blank':
+      case 'True False':
+      case 'Short answer':
+      case 'Long answer':
+      case 'Error Correction':
         return const SizedBox(); // nothing extra
 
       default:
@@ -84,6 +87,25 @@ class MatchPairs extends StatelessWidget {
           .toList(),
     );
   }
+}
+
+
+class ComprehensionQuestion extends StatelessWidget{
+    final List<dynamic>questions;
+    const ComprehensionQuestion({
+        super.key,
+        required this.questions,
+    });
+    
+    @override
+    Widget build(BuildContext context){
+        return Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+            children: questions.map((question) {
+              return Text(question['text'].toString().trim());
+            }).toList()
+        );
+    }
 }
 
 class QuestionTable extends StatelessWidget {

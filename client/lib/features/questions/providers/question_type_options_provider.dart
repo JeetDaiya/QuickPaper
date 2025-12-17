@@ -1,7 +1,6 @@
 import 'package:client/features/questions/viewmodel/question_viewmodel.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
-import '../../../core/utils/question_type_map.dart';
-import 'package:client/core/hive/models/question_model.dart';
+
 
 part 'question_type_options_provider.g.dart';
 

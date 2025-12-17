@@ -1,8 +1,10 @@
 import 'dart:ui';
+import 'package:client/features/home/views/pages/home_page.dart';
 import 'package:client/features/questions/providers/selected_questions_provider.dart';
 import 'package:client/features/questions/services/pdf/sectioned_pdf_service.dart';
 import 'package:client/features/questions/view/pdf_preview_screen.dart';
 import 'package:client/features/questions/view/question_screen.dart';
+import 'package:client/features/subject/providers/paper_flow_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:pdf/pdf.dart';
@@ -17,7 +19,7 @@ class SelectedQuestionsPreviewScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final selectedQuestionsInfo = ref.watch(selectedQuestionsInfoProvider);
     final selectedQuestions = ref.watch(selectedQuestionsProvider);
-
+    final paperFlow = ref.watch(paperFlowProvider);
     return Scaffold(
       appBar: selectedQuestionsInfo.count > 0
           ? AppBar(
@@ -61,18 +63,24 @@ class SelectedQuestionsPreviewScreen extends ConsumerWidget {
                     ),
                   ),
                   const SizedBox(height: 10),
-                  Text('No Questions Selected', style: TextStyle(fontSize: 20)),
+                  Text(
+                     paperFlow == PaperStep.selectSubject ? 'No Paper in Progress' : 'No Questions Selected',
+                      style: TextStyle(fontSize: 20)),
                   const SizedBox(height: 10),
                   Text(
-                    'Add questions from the Question Bank to create your paper',
+                   paperFlow == PaperStep.selectSubject ? 'Create Paper from the Home Page' :  'Add questions from the Question Bank to create your paper',
                     style: TextStyle(color: Colors.grey, fontSize: 14),
                   ),
                   const SizedBox(height: 10),
                   TextButton(
                     onPressed: () => {
-                      Navigator.of(context).pushReplacement(
-                        MaterialPageRoute(builder: (context) => QuestionScreen())
-                      )
+                      if(paperFlow == PaperStep.selectSubject){
+                        Navigator.of(context).pop()
+                      }else{
+                        Navigator.of(context).pushReplacement(
+                          MaterialPageRoute(builder: (context) => QuestionScreen())
+                        )
+                      }
                     },
                     style: ButtonStyle(
                       backgroundColor: WidgetStateProperty.all(Pallete.primaryColor),
@@ -80,7 +88,7 @@ class SelectedQuestionsPreviewScreen extends ConsumerWidget {
                       shape: WidgetStateProperty.all(RoundedRectangleBorder( borderRadius: BorderRadius.circular(10) ))
                     ),
                     child: Text(
-                      'Go to Questions Bank',
+                      paperFlow == PaperStep.selectSubject ? 'Go to Home Page' : 'Go to Questions Bank',
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 14,

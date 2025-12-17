@@ -1,22 +1,27 @@
 import 'package:client/features/home/views/pages/home_page.dart';
-import 'package:client/features/questions/view/ai_question_dialog.dart';
-import 'package:client/features/questions/view/question_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:client/core/hive/hive_init.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
+
+import 'features/questions/viewmodel/question_viewmodel.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await HiveInit.init();
+  await Supabase.initialize(
+    url: 'https://gsiifkumzpfjjoqkuksg.supabase.co',
+    anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdzaWlma3VtenBmampvcWt1a3NnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjU4NzQwOTIsImV4cCI6MjA4MTQ1MDA5Mn0.Z3HvuuyauTHScxyFx1rfAimfCjPZiPXouBp5UYRU_1s', // ✅ Safe to put in app
+  );
   runApp(ProviderScope(child: const MyApp()));
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends ConsumerWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    ref.read(questionViewmodelProvider.future);
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(

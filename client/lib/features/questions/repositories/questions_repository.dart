@@ -6,7 +6,7 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 part 'questions_repository.g.dart';
 
 @riverpod
-QuestionRepository questionRepository(QuestionRepositoryRef ref){
+QuestionRepository questionRepository(QuestionRepositoryRef ref) {
   final local = ref.watch(questionLocalDataSourceProvider);
   final remote = ref.watch(questionRemoteDataSourceProvider);
   return QuestionRepository(local, remote);
@@ -16,55 +16,52 @@ class QuestionRepository {
   final QuestionLocalDataSource _local;
   final QuestionRemoteDataSource _remote;
 
-  QuestionRepository(this._local, this._remote,);
+  QuestionRepository(this._local, this._remote);
 
-  Future<List<Question>>getQuestions() async {
-    try{
+  Future<List<Question>> getQuestions() async {
+    try {
       final localVersion = _local.getDataVersion();
-      final remoteVersion = await _remote.getVersion();
+      int remoteVersion = localVersion;
+      try {
+        remoteVersion = await _remote.getVersion();
+      } catch (_) {
+        print("⚠️ Could not fetch remote version. Staying offline.");
+      }
 
-      if(localVersion < remoteVersion){
-        Future.delayed(const Duration(seconds: 5));
+      final localData = _local.getQuestion();
+
+      if (localVersion < remoteVersion || localData.isEmpty) {
+
+        print("🔄 Syncing... (Local: $localVersion, Remote: $remoteVersion)");
+
         final freshData = await _remote.getQuestions();
-        await _local.cacheQuestion(freshData);
-        await _local.setDataVersion(remoteVersion);
-        return freshData;
-      }else{
-        return _local.getQuestion();
+
+        if (freshData.isNotEmpty) {
+          await _local.cacheQuestion(freshData);
+          await _local.setDataVersion(remoteVersion);
+          return freshData;
+        }
       }
-    }catch(error){
-      try{
-        final cached = _local.getQuestion();
-        return cached;
-      }catch(_){
-       throw Exception('Error loading question, check you internet and try again.');
+
+      // Local is up to date OR we are offline
+      if (localData.isNotEmpty) {
+        return localData;
       }
+
+      // No internet and No local data
+      throw Exception('No data available');
+
+    } catch (error) {
+      // Try to return whatever is in cache
+      final cached = _local.getQuestion();
+      if (cached.isNotEmpty) return cached;
+
+      throw Exception('Error loading questions. Check your internet connection.');
     }
   }
 
-  Future<int>getTotalQuestions() async {
-    try {
-      final localVersion = _local.getDataVersion();
-      final remoteVersion = await _remote.getVersion();
-      if (localVersion < remoteVersion) {
-        Future.delayed(const Duration(seconds: 5));
-        final freshData = await _remote.getQuestions();
-        await _local.cacheQuestion(freshData);
-        await _local.setDataVersion(remoteVersion);
-        return freshData.length;
-      } else {
-        return _local
-            .getQuestion()
-            .length;
-      }
-    }catch(error){
-      try{
-        final cached = _local.getQuestion();
-        return cached.length;
-    }
-      catch(_){
-        throw Exception('Error loading question, check you internet and try again.');
-      }
-    }
+  Future<int> getTotalQuestions() async {
+    final questions = await getQuestions();
+    return questions.length;
   }
 }

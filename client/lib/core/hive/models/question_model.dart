@@ -48,7 +48,8 @@ class Question{
     this.chapter,
     this.standard,
     required this.marks,
-    this.answer
+    this.answer,
+    this.subject
   });
 
 
@@ -61,7 +62,8 @@ class Question{
       hasImage: map['has_image'] != null ? map['has_image'] as bool : false,
       imageUrl: map['imageUrl'] != null ? map['imageUrl'] as String : null,
       marks: map['marks'] as int,
-      answer: map['answer']?.toString()
+      answer: map['answer']?.toString(),
+      subject: map['subject']
     );
   }
 }
