@@ -27,7 +27,7 @@ export function generatePrompt(topic, chapter){
        - Use for: Multiple choice questions.
        - "data": { "options": ["A) Option 1", "B) Option 2", "C) Option 3", "D) Option 4"]}
     
-    2. FILL_BLANKS
+    2. FILL_BLANK
         - Use for: Fill-in-the-blank questions.
         - "data": { "sentence": "The capital of France is _____."}
     
