@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:client/core/hive/hive_init.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
+import 'core/hive/models/question_model.dart';
 import 'features/questions/viewmodel/question_viewmodel.dart';
 
 void main() async {
@@ -16,11 +17,38 @@ void main() async {
   runApp(ProviderScope(child: const MyApp()));
 }
 
-class MyApp extends ConsumerWidget {
+
+class MyApp extends ConsumerStatefulWidget {
   const MyApp({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  ConsumerState createState() => _MyAppState();
+}
+
+class _MyAppState extends ConsumerState<MyApp> {
+  @override
+  Widget build(BuildContext context) {
+    @override
+    void initState() {
+      super.initState();
+
+      ref.listen<AsyncValue<List<Question>>>(
+        questionViewmodelProvider,
+            (previous, next) {
+          next.whenOrNull(
+            error: (error, _) {
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  content: Text(error.toString()),
+                  behavior: SnackBarBehavior.floating,
+                ),
+              );
+            },
+          );
+        },
+      );
+    }
+
     ref.read(questionViewmodelProvider.future);
     return MaterialApp(
       title: 'Flutter Demo',
@@ -46,3 +74,5 @@ class MyApp extends ConsumerWidget {
     );
   }
 }
+
+

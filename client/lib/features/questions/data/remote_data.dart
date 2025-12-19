@@ -46,12 +46,14 @@ class QuestionRemoteDataSource{
       final response = await _supabase
           .from('app_config')
           .select('value')
-          .eq('key', 'data_version')
+          .eq('key', 'version')
           .single();
       // Parse string "1" to int 1
-      return int.parse(response['value']);
+      print('nigggaaaaa $response');
+      return response['value'] as int;
     } catch (e) {
       // Default to 0 or throw error if version check fails
+      print(e);
       return 0;
     }
   }

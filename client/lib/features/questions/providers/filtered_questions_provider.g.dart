@@ -7,7 +7,7 @@ part of 'filtered_questions_provider.dart';
 // **************************************************************************
 
 String _$questionsBySubjectHash() =>
-    r'3b0fec51c22fc846f2a85dab7463d462a6a26fef';
+    r'5caf5a33e0d1048c4bd32d06088895e3e383b7e4';
 
 /// See also [questionsBySubject].
 @ProviderFor(questionsBySubject)
@@ -22,7 +22,7 @@ final questionsBySubjectProvider = FutureProvider<List<Question>>.internal(
 );
 
 typedef QuestionsBySubjectRef = FutureProviderRef<List<Question>>;
-String _$filteredQuestionsHash() => r'2553c3066a7c71c4e450e47dc8767d4f9a0e2ac9';
+String _$filteredQuestionsHash() => r'25e33f181d9964e132e20914e8d675dcfdfbd8ac';
 
 /// See also [filteredQuestions].
 @ProviderFor(filteredQuestions)

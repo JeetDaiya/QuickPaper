@@ -1,3 +1,4 @@
+import 'package:client/features/history/providers/saved_paper_provider.dart';
 import 'package:client/features/home/models/stat_model.dart';
 import 'package:client/features/home/data/paper_data.dart';
 import 'package:client/features/questions/repositories/questions_repository.dart';
@@ -15,9 +16,9 @@ class StatViewmodel extends _$StatViewmodel {
 
   FutureOr<StatModel>_getStats() async{
     final totalQuestions = await ref.watch(questionRepositoryProvider).getTotalQuestions();
-    final paperCreated = ref.watch(paperLocalDataSourceProvider).getPapers().length;
+    final paperCreated = ref.watch(getPapersProvider);
     return StatModel(
-      paperCreated: paperCreated,
+      paperCreated: paperCreated.length,
       totalQuestions: totalQuestions
     );
   }

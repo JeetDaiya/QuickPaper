@@ -7,5 +7,6 @@ Map<String,String>questionTypeMap = {
   'LONG_ANS': 'Long answer',
   'ERROR_CORRECTION' : 'Error correction',
   'TABLE_DATA': 'Table data',
-  'COMPREHENSION' : 'Comprehension'
+  'COMPREHENSION' : 'Comprehension',
+  'MAP_WORK' : 'Map Work'
 };

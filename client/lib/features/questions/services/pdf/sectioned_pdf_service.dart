@@ -1,4 +1,6 @@
+import 'package:client/features/subject/domain/subject.dart';
 import 'package:flutter/services.dart';
+import 'package:intl/intl.dart';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
 import '../../../../core/hive/models/question_model.dart';
@@ -7,38 +9,41 @@ import '../../domain/section_rules.dart';
 import 'pdf_widgets.dart';
 
 class SectionedPdfService {
-  Future<Uint8List> generate(
-      PdfPageFormat format,
-      List<Question> questions,
-      ) async {
-    final pdf = pw.Document();
+  Future<Uint8List> generate({
+    required List<Question> questions,
+    required String title,
+    required Subject subject,
+    required String institutionName
+  }
+  ) async {
+    final pdf = pw.Document(
+      title: title,
+    );
 
-    final fontData =
-    await rootBundle.load('assets/fonts/Gujarati.ttf');
+    final fontData = await rootBundle.load('assets/fonts/Gujarati.ttf');
     final ttf = pw.Font.ttf(fontData);
 
     pdf.addPage(
       pw.MultiPage(
-        pageFormat: format,
+        pageFormat: PdfPageFormat.a4,
         theme: pw.ThemeData.withFont(base: ttf),
         margin: const pw.EdgeInsets.all(32),
-        build: (_) => _buildPaper(questions),
+        build: (_) => _buildPaper(questions, subject, title, institutionName),
       ),
     );
 
     return pdf.save();
   }
 
-  List<pw.Widget> _buildPaper(List<Question> questions) {
+  List<pw.Widget> _buildPaper(List<Question> questions, Subject subject, String title, String institutionName) {
     final widgets = <pw.Widget>[];
     int qNo = 1;
 
-    widgets.add(_header(questions));
+    widgets.add(_header(questions, subject, title, institutionName));
     widgets.add(pw.SizedBox(height: 20));
 
     for (final section in sections) {
-      final sectionQuestions =
-      questions.where(section.matcher).toList();
+      final sectionQuestions = questions.where(section.matcher).toList();
 
       if (sectionQuestions.isEmpty) continue;
 
@@ -86,32 +91,58 @@ class SectionedPdfService {
     return widgets;
   }
 
-  pw.Widget _header(List<Question> questions) {
-    final totalMarks =
-    questions.fold(0, (s, q) => s + q.marks);
+  pw.Widget _header(List<Question> questions, Subject subject, String title, String institutionName) {
+    final totalMarks = questions.fold(0, (s, q) => s + q.marks);
 
     return pw.Column(
       children: [
-        pw.Text(
-          'Final Examination',
-          style: pw.TextStyle(
-            fontSize: 22,
-            fontWeight: pw.FontWeight.bold,
-          ),
+        pw.Row(
+          mainAxisAlignment: pw.MainAxisAlignment.spaceBetween,
+          children: [
+            pw.Text(
+                DateFormat.yMMMMd().format(DateTime.now()),
+              style: pw.TextStyle(fontSize: 12),
+            ),
+            pw.Column(
+              children: [
+                pw.Text(
+                  institutionName,
+                  style: pw.TextStyle(fontSize: 14, fontWeight: pw.FontWeight.bold)
+                ),
+                pw.SizedBox(height: 3),
+                pw.Text(
+                  title,
+                  style: pw.TextStyle(fontSize: 14, fontWeight: pw.FontWeight.bold),
+                ),
+                pw.SizedBox(height: 3),
+
+              ]
+            ),
+            pw.Column(
+              children: [
+                pw.Text(
+                    'Subject: ${subject.label}',
+                    style: pw.TextStyle(fontSize: 12, fontWeight: pw.FontWeight.bold)
+                ),
+                pw.SizedBox(height: 2),
+                pw.Text(
+                  'Total Marks: $totalMarks',
+                  style: pw.TextStyle(fontSize: 12),
+                ),
+              ]
+            )
+          ],
         ),
-        pw.SizedBox(height: 6),
-        pw.Text(
-          'Total Questions: ${questions.length}   |   Total Marks: $totalMarks',
-          style: pw.TextStyle(fontSize: 12),
-        ),
-        pw.Divider(),
-      ],
+        pw.SizedBox(height: 5),
+        pw.Divider()
+      ]
     );
   }
 
   pw.Widget _question(int index, Question q) {
-    final data =
-    q.additionalData is Map ? Map<String, dynamic>.from(q.additionalData!) : {};
+    final data = q.additionalData is Map
+        ? Map<String, dynamic>.from(q.additionalData!)
+        : {};
 
     return pw.Container(
       margin: const pw.EdgeInsets.only(bottom: 12),
@@ -121,17 +152,17 @@ class SectionedPdfService {
           pw.Row(
             crossAxisAlignment: pw.CrossAxisAlignment.start,
             children: [
-              pw.Text('$index. ',
-                  style: pw.TextStyle(fontWeight: pw.FontWeight.bold)),
+              pw.Text(
+                '$index. ',
+                style: pw.TextStyle(fontWeight: pw.FontWeight.bold),
+              ),
               pw.Expanded(
                 child: pw.Text(q.text, style: const pw.TextStyle(fontSize: 12)),
               ),
             ],
           ),
 
-          if (data['options'] is List)
-            _options(data['options']),
-
+          if (data['options'] is List) _options(data['options']),
 
           pw.Align(
             alignment: pw.Alignment.centerRight,
@@ -140,7 +171,6 @@ class SectionedPdfService {
               style: pw.TextStyle(fontSize: 9),
             ),
           ),
-
         ],
       ),
     );
@@ -155,8 +185,10 @@ class SectionedPdfService {
         children: options.map((o) {
           return pw.SizedBox(
             width: 220,
-            child: pw.Text(o.toString(),
-                style: const pw.TextStyle(fontSize: 11)),
+            child: pw.Text(
+              o.toString(),
+              style: const pw.TextStyle(fontSize: 11),
+            ),
           );
         }).toList(),
       ),

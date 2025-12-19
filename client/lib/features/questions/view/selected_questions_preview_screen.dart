@@ -9,6 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:pdf/pdf.dart';
 import '../../../core/theme/app_pallete.dart';
+import '../../subject/providers/selected_subject_provider.dart';
 import '../providers/selected_question_info_provider.dart';
 import '../widgets/question_tag.dart';
 
@@ -193,7 +194,7 @@ class SelectedQuestionsPreviewScreen extends ConsumerWidget {
                                                         0xFF475569,
                                                       ),
                                                       info: question
-                                                          .questionType,
+                                                            .questionType,
                                                     ),
                                                   ],
                                                 ),
@@ -252,19 +253,7 @@ class SelectedQuestionsPreviewScreen extends ConsumerWidget {
                       ),
                     ),
                   ),
-                    onPressed: () {
-                      final sectionedPdfService = SectionedPdfService();
-                      final selectedQuestions = ref.read(selectedQuestionsProvider);
-                      final pdfData = sectionedPdfService.generate(PdfPageFormat.a4, selectedQuestions);
-                      Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (context) => PdfPreviewScreen(
-                            pdfData: pdfData,
-                            title: 'Question Paper Preview',
-                          ),
-                        ),
-                      );
-                    },
+                    onPressed: () => onGeneratePdfTap(context, ref),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -305,5 +294,90 @@ class SelectedQuestionsPreviewScreen extends ConsumerWidget {
       },
       child: child,
     );
+  }
+}
+
+
+// The function called when user clicks "Generate PDF"
+void onGeneratePdfTap(BuildContext context, WidgetRef ref) async {
+
+  // 1. Show a Dialog to get the name
+  final Map<String, String>? details = await showDialog<Map<String, String>>(
+    context: context,
+    builder: (context) {
+      String tempTitle = "";
+      String tempInstitution = "";
+      return AlertDialog(
+        title: const Text("Finalize Paper"),
+        content: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            TextField(
+              autofocus: true,
+              decoration: const InputDecoration(
+                labelText: "Institution Name",
+                hintText: "e.g. XYZ School",
+                border: OutlineInputBorder(),
+              ),
+              onChanged: (value) => tempInstitution= value,
+            ),
+            const SizedBox(height: 16), // Spacing between inputs
+            TextField(
+              decoration: const InputDecoration(
+                labelText: "Paper Title",
+                hintText: "e.g. Class 10 - Unit Test 1",
+                border: OutlineInputBorder(),
+              ),
+              onChanged: (value) => tempTitle = value,
+            ),
+          ],
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context, null), // Cancel
+            child: const Text("Cancel"),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              // Use a default if empty
+              if (tempTitle.isEmpty) tempTitle = "Untitled Exam";
+              Navigator.pop(context, {
+                "title" : tempTitle,
+                "institution" : tempInstitution
+              });
+            },
+            child: const Text("Generate"),
+          ),
+        ],
+      );
+    },
+  );
+
+  // 2. If user cancelled, stop here
+  if (details == null) return;
+  final String paperTitle = details['title']!;
+  final String institutionName = details['institution']!;
+
+  print('Niggaaa: $institutionName');
+
+
+  // 3. Get Data
+  final questions = ref.read(selectedQuestionsProvider);
+  final subject = ref.read(selectedSubjectProvider);
+
+
+  // 4. Generate PDF (Pass the user's title into your PDF function)
+  // Assuming generatePdf takes (questions, title)
+  final pdfData = SectionedPdfService().generate(questions:  questions, title: paperTitle, subject: subject!, institutionName: institutionName );
+
+  // 5. Navigate to Preview
+  if (context.mounted) {
+    Navigator.of(context).push(MaterialPageRoute(
+      builder: (context) => PdfPreviewScreen(
+        pdfData: pdfData, // This PDF now has the correct title header
+        title: paperTitle, // This title is used for the Hive save
+        subject: subject,
+      ),
+    ));
   }
 }

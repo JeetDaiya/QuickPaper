@@ -8,7 +8,7 @@ export async function generateQuestions(req, res) {
     console.log('Received Request');
     
     try{
-        const fileName = `${topic}_${chapter}.pdf`;
+        const fileName = `${topic}_${chapter}`;
         const pdfData = await fetchPdf(fileName);
         const prompt = generatePrompt(topic, chapter);
         const response = await generateQuestionsService(prompt, pdfData);

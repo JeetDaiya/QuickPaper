@@ -1,4 +1,5 @@
 import 'package:client/core/theme/app_pallete.dart';
+import 'package:client/features/home/widget/recent_papers.dart';
 import 'package:client/features/home/widget/stat_widget.dart';
 import 'package:client/features/questions/providers/filtered_questions_provider.dart';
 import 'package:client/features/questions/providers/marks_filter_provider.dart';
@@ -200,6 +201,12 @@ class _HomePageState extends ConsumerState<HomePage> {
                 ),
               ),
             ),
+            Positioned(
+              top: 370,
+              left: 20,
+              right: 20,
+              child: RecentPapers(),
+            )
           ],
         ),
         bottomNavigationBar: Container(

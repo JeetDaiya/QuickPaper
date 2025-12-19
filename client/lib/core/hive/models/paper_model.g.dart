@@ -17,16 +17,25 @@ class PaperAdapter extends TypeAdapter<Paper> {
       for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
     };
     return Paper(
-      filePath: fields[0] as String,
+      filePath: fields[0] as String?,
+      questionIds: (fields[1] as List).cast<String>(),
+      dateOfCreation: fields[2] as String,
+      subject: fields[3] as String,
     );
   }
 
   @override
   void write(BinaryWriter writer, Paper obj) {
     writer
-      ..writeByte(1)
+      ..writeByte(4)
       ..writeByte(0)
-      ..write(obj.filePath);
+      ..write(obj.filePath)
+      ..writeByte(1)
+      ..write(obj.questionIds)
+      ..writeByte(2)
+      ..write(obj.dateOfCreation)
+      ..writeByte(3)
+      ..write(obj.subject);
   }
 
   @override

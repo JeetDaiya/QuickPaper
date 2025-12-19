@@ -25,10 +25,12 @@ class QuestionRepository {
       try {
         remoteVersion = await _remote.getVersion();
       } catch (_) {
-        print("⚠️ Could not fetch remote version. Staying offline.");
+        throw Exception('Could not fetch remote version. Using offline questions');
       }
 
       final localData = _local.getQuestion();
+
+      print(remoteVersion);
 
       if (localVersion < remoteVersion || localData.isEmpty) {
 
