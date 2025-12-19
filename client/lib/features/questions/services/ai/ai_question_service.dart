@@ -1,4 +1,4 @@
-  import 'package:dio/dio.dart';
+   import 'package:dio/dio.dart';
 
   import '../../../../core/hive/models/question_model.dart';
 
@@ -15,6 +15,7 @@
           'chapter': chapter
         },
         options: Options(
+          receiveTimeout: Duration(seconds: 120),
           responseType: ResponseType.json,
           headers: {
             'Content-Type': 'application/json'

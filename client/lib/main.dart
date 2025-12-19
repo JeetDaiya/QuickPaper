@@ -51,6 +51,7 @@ class _MyAppState extends ConsumerState<MyApp> {
 
     ref.read(questionViewmodelProvider.future);
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.

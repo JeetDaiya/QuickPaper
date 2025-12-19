@@ -1,8 +1,10 @@
 import 'package:client/features/questions/viewmodel/ai_question_viewmodel.dart';
+import 'package:client/features/subject/providers/selected_subject_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../core/hive/models/question_model.dart';
+import '../../subject/domain/subject.dart';
 import '../widgets/question_card.dart';
 
 const List<String> chapters = [
@@ -32,6 +34,8 @@ class _AiQuestionDialogState extends ConsumerState<AiQuestionDialog> {
     final aiState = ref.watch(
         aiQuestionViewmodelProvider
     );
+    final selectedSubject = ref.watch(selectedSubjectProvider);
+    final subjectString = selectedSubject?.apiKey;
     final hasQuestions = aiState.when(
       data: (q) => q.isNotEmpty,
       loading: () => false,
@@ -210,8 +214,10 @@ class _AiQuestionDialogState extends ConsumerState<AiQuestionDialog> {
   }
 
   void _generate() {
+    final selectedSubject = ref.read(selectedSubjectProvider);
+    final subject = selectedSubject?.apiKey ?? '';
     ref.read(aiQuestionViewmodelProvider.notifier).fetchAiQuestion(
-      topic: 'sci',
+      topic: subject,
       chapter: _selectedChapter,
     );
   }
