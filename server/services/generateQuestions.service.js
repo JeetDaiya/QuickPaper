@@ -31,6 +31,6 @@ export async function generateQuestionsService(prompt, pdfData) {
             ]
         })
         console.log(response.text);
-        return response;
+        return response.text;
     
 }

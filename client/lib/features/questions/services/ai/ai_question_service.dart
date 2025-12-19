@@ -1,8 +1,10 @@
-   import 'package:dio/dio.dart';
+   import 'dart:convert';
+
+import 'package:dio/dio.dart';
 
   import '../../../../core/hive/models/question_model.dart';
 
-  final urlPath = 'http://10.0.2.2:4000/api/generate-questions';
+  final urlPath = 'https://quickpaper-s8n2.onrender.com/api/generate-questions';
 
   class AiQuestionService {
     final Dio _dio = Dio();
@@ -22,7 +24,18 @@
           }
         )
       );
-      final List list = response.data['data'];
-      return list.map<Question>((e) => Question.fromMap(e)).toList();
+      final dynamic rawData = response.data['data'];
+      List<dynamic>parsedList;
+      if (rawData is String) {
+        parsedList = jsonDecode(rawData);
+      } else {
+        // If the server was fixed to return a List, use it directly
+        parsedList = rawData;
+      }
+
+      // 3. Convert to Question objects
+      return parsedList.map<Question>((e) => Question.fromMap(e)).toList();
+
+
     }
   }
